@@ -34,35 +34,35 @@
     </types>
     <types>
         <members>*</members>
-        <name>Store__c</name>
+        <name>Store</name>
     </types>
     <types>
         <members>*</members>
-        <name>Store_Owner__c</name>
+        <name>Store Owner</name>
     </types>
     <types>
         <members>*</members>
-        <name>Employee__c</name>
+        <name>Employee</name>
     </types>
     <types>
         <members>*</members>
-        <name>Transaction__c</name>
+        <name>Transaction</name>
     </types>
     <types>
         <members>*</members>
-        <name>Customer__c</name>
+        <name>Customer</name>
     </types>
     <types>
         <members>*</members>
-        <name>Product__c</name>
+        <name>Product</name>
     </types>
     <types>
         <members>*</members>
-        <name>Supplier__c</name>
+        <name>Supplier</name>
     </types>
     <types>
         <members>*</members>
-        <name>Supplier_Order__c</name>
+        <name>Supplier Order</name>
     </types>
     <version>52.0</version>
 </Package>
