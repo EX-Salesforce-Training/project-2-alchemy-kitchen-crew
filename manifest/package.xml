@@ -34,35 +34,8 @@
     </types>
     <types>
         <members>*</members>
-        <name>Store</name>
+        <name>CustomObject</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>Store Owner</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Employee</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Transaction</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Customer</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Product</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Supplier</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Supplier Order</name>
-    </types>
+    
     <version>52.0</version>
 </Package>
