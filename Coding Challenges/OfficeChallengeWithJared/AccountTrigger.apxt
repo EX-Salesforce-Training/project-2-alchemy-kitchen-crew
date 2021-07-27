@@ -1,3 +1,0 @@
-trigger AccountTrigger on Account (before delete) {
-    OfficeChallenge.PreventDeletion(Trigger.new);
-}
