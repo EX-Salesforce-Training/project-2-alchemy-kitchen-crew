@@ -32,5 +32,37 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Store__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Store_Owner__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Employee__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Transaction__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Customer__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Product__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Supplier__c</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Supplier_Order__c</name>
+    </types>
     <version>52.0</version>
 </Package>
