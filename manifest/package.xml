@@ -22,15 +22,11 @@
     </types>
     <types>
         <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalValueSet</name>
     </types>
     <types>
         <members>*</members>
@@ -38,7 +34,15 @@
     </types>
     <types>
         <members>*</members>
-        <name>GlobalValueSet</name>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
     </types>
     <version>52.0</version>
 </Package>
