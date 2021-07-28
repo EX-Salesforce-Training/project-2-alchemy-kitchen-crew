@@ -1,3 +1,3 @@
-# The Gearheads Project 1 Repo
-## Authors: 
-### Dominic Romanello, Endalkachew Filfilu, Nouh Anies
+# Project 1 - The Shopping Dead
+
+## Authors: Dominic Romanello, Nouh Anies, Endalkachew Filfilu
