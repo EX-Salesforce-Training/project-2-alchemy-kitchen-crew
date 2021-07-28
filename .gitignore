@@ -5,6 +5,10 @@
 # Salesforce cache
 .sfdx/
 .localdevserver/
+.history/
+.vscode/
+config/
+scripts/
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
@@ -36,3 +40,12 @@ $RECYCLE.BIN/
 
 # Local environment variables
 .env
+
+# Any random things we don't need in the repo
+.eslintignore
+.forceignore
+.prettierignore
+.prettierrrc
+.swift-sfdc.json
+jest.config.js
+sfdx-project.json
