@@ -1,0 +1,26 @@
+<apex:page controller="SuplierOrder">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockTable value="{!spplier}" var="sp">
+           <apex:column value="{!sp.Name}"/>
+             <apex:column value="{!sp.Shipping_Address__c}"/>
+             <apex:column value="{!sp.Cost__c}"/>
+             <apex:column value="{!sp.Quantity__c}"/>
+            
+                   
+        
+        </apex:pageBlockTable>
+        <apex:pageBlockButtons >
+        <apex:commandButton action="{!getFields}" value="next"/>
+        </apex:pageBlockButtons>
+    
+    
+    </apex:pageBlock>
+    
+    </apex:form>
+
+
+
+
+
+</apex:page>
