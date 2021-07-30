@@ -4,10 +4,18 @@
     <description>The item name is the name of item the supplier</description>
     <externalId>false</externalId>
     <label>Item Name</label>
-    <length>20</length>
-    <required>true</required>
+    <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>compter</fullName>
+                <default>false</default>
+                <label>compter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
 </CustomField>

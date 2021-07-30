@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>ApexClass</name>
+    <members>SuplierOrder</members>
+    <members>test</members>
+  </types>
+  <types>
+    <name>GlobalValueSet</name>
+    <members>Credit_Card_Type</members>
+    <members>Future_Years</members>
+    <members>Months</members>
+  </types>
+  <types>
+    <name>Layout</name>
+    <members>Account-Account %28Marketing%29 Layout</members>
+    <members>Account-Account %28Sales%29 Layout</members>
+    <members>Account-Account %28Support%29 Layout</members>
+    <members>Account-Account Layout</members>
+    <members>AlternativePaymentMethod-Alternative Payment Method Layout</members>
+    <members>ApiAnomalyEventStore-API Anomaly Event Store Layout</members>
+    <members>Asset-Asset Layout</members>
+    <members>AssetAction-Asset Action Layout</members>
+    <members>AssetActionSource-Asset Action Source Layout</members>
+    <members>AssetRelationship-Asset Relationship Layout</members>
+    <members>AssetStatePeriod-Asset State Period Layout</members>
+    <members>AuthorizationForm-Authorization Form Layout</members>
+    <members>AuthorizationFormConsent-Authorization Form Consent Layout</members>
+    <members>AuthorizationFormDataUse-Authorization Form Data Use Layout</members>
+    <members>AuthorizationFormText-Authorization Form Text Layout</members>
+    <members>Campaign-Campaign Layout</members>
+    <members>CampaignMember-Campaign Member Page Layout</members>
+    <members>CardPaymentMethod-Card Payment Method Layout</members>
+    <members>Case-Case %28Marketing%29 Layout</members>
+    <members>Case-Case %28Sales%29 Layout</members>
+    <members>Case-Case %28Support%29 Layout</members>
+    <members>Case-Case Layout</members>
+    <members>CaseClose-Close Case Layout</members>
+    <members>CaseMilestone-Case Milestone Layout</members>
+    <members>CommunityMemberLayout-Community Member Layout</members>
+    <members>ConsumptionRate-Consumption Rate Layout</members>
+    <members>ConsumptionSchedule-Consumption Schedule Layout</members>
+    <members>Contact-Contact %28Marketing%29 Layout</members>
+    <members>Contact-Contact %28Sales%29 Layout</members>
+    <members>Contact-Contact %28Support%29 Layout</members>
+    <members>Contact-Contact Layout</members>
+    <members>ContactPointAddress-Contact Point Address Layout</members>
+    <members>ContactPointEmail-Contact Point Email Layout</members>
+    <members>ContactPointPhone-Contact Point Phone Layout</members>
+    <members>ContactPointTypeConsent-Contact Point Type Consent Layout</members>
+    <members>ContentVersion-Content Version Layout</members>
+    <members>Contract-Contract Layout</members>
+    <members>ContractLineItem-Contract Line Item Layout</members>
+    <members>CredentialStuffingEventStore-Credential Stuffing Event Store Layout</members>
+    <members>CreditMemo-Credit Memo Layout</members>
+    <members>CreditMemoLine-Credit Memo Line Layout</members>
+    <members>Customer__c-Customer Layout</members>
+    <members>DandBCompany-D%26B Company Layout</members>
+    <members>DataUseLegalBasis-Data Use Legal Basis Layout</members>
+    <members>DataUsePurpose-Data Use Purpose Layout</members>
+    <members>DigitalWallet-Digital Wallet Layout</members>
+    <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
+    <members>EmailMessage-Email Message Layout</members>
+    <members>Employee__c-Employee Layout</members>
+    <members>Entitlement-Entitlement Layout</members>
+    <members>EntityMilestone-Object Milestone Layout</members>
+    <members>Event-Event Layout</members>
+    <members>FeedItem-Feed Item Layout</members>
+    <members>FinanceBalanceSnapshot-Finance Balance Snapshot Layout</members>
+    <members>FinanceTransaction-Finance Transaction Layout</members>
+    <members>Global-Global Layout</members>
+    <members>Goal-Goal Layout</members>
+    <members>GoalLink-Goal Link Layout</members>
+    <members>Idea-Idea Layout</members>
+    <members>Individual-Individual Layout</members>
+    <members>Invoice-Invoice Layout</members>
+    <members>InvoiceLine-Invoice Line Layout</members>
+    <members>JobTracker-Job Tracker Layout</members>
+    <members>JobTracker-Job Tracker Layout - Summer %2715</members>
+    <members>JobTracker-Job Tracker Layout - Winter %2716</members>
+    <members>Lead-Lead %28Marketing%29 Layout</members>
+    <members>Lead-Lead %28Sales%29 Layout</members>
+    <members>Lead-Lead %28Support%29 Layout</members>
+    <members>Lead-Lead Layout</members>
+    <members>LegalEntity-Legal Entity Layout</members>
+    <members>Macro-Macro Layout</members>
+    <members>Metric-Completion Metric Layout</members>
+    <members>Metric-Metric Layout</members>
+    <members>MetricDataLink-Metric Data Link Layout</members>
+    <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+    <members>Opportunity-Opportunity %28Sales%29 Layout</members>
+    <members>Opportunity-Opportunity %28Support%29 Layout</members>
+    <members>Opportunity-Opportunity Layout</members>
+    <members>OpportunityLineItem-Opportunity Product Layout</members>
+    <members>Order-Order Layout</members>
+    <members>OrderItem-Order Product Layout</members>
+    <members>Payment-Payment Layout</members>
+    <members>PaymentAuthAdjustment-Payment Authorization Adjustment Layout</members>
+    <members>PaymentAuthorization-Payment Authorization Layout</members>
+    <members>PaymentGateway-Payment Gateway Layout</members>
+    <members>PaymentGatewayLog-Payment Gateway Log Layout</members>
+    <members>PaymentGroup-Payment Group Layout</members>
+    <members>PaymentLineInvoice-Payment Line Invoice Layout</members>
+    <members>Pricebook2-Price Book Layout</members>
+    <members>PricebookEntry-Price Book Entry Layout</members>
+    <members>ProcessException-Process Exception Layout</members>
+    <members>Product2-Product Layout</members>
+    <members>ProductConsumptionSchedule-Product Consumption Schedule Layout</members>
+    <members>Product__c-Consumable Product Layout</members>
+    <members>Product__c-Health Item Layout</members>
+    <members>Product__c-Product Layout</members>
+    <members>Product__c-Weapon Product Layout</members>
+    <members>QuickText-Quick Text Layout</members>
+    <members>Refund-Refund Layout</members>
+    <members>RefundLinePayment-Refund Line Payment Layout</members>
+    <members>ReportAnomalyEventStore-Report Anomaly Event Store Layout</members>
+    <members>Scorecard-Scorecard Layout</members>
+    <members>ScorecardAssociation-Scorecard Association Layout</members>
+    <members>ScorecardMetric-Scorecard Metric Layout</members>
+    <members>ServiceContract-Service Contract Layout</members>
+    <members>SessionHijackingEventStore-Session Hijacking Event Store Layout</members>
+    <members>SocialPersona-Social Persona Layout</members>
+    <members>Solution-Solution Layout</members>
+    <members>Store_Owner__c-Store Owner Layout</members>
+    <members>Store__c-Store Layout</members>
+    <members>Supplier_Order__c-Supplier Order Layout</members>
+    <members>Supplier__c-Supplier Layout</members>
+    <members>Task-Task Layout</members>
+    <members>ThreatDetectionFeedback-Threat Detection Feedback Layout</members>
+    <members>Transaction__c-Transaction Layout</members>
+    <members>User-User Layout</members>
+    <members>UserAlt-User Profile Layout</members>
+    <members>UserProvAccount-User Provisioning Account Layout</members>
+    <members>UserProvisioningLog-User Provisioning Log Layout</members>
+    <members>UserProvisioningRequest-User Provisioning Request Layout</members>
+    <members>WorkAccess-Access Layout</members>
+    <members>WorkBadge-Badge Received Layout</members>
+    <members>WorkBadgeDefinition-Badge Layout</members>
+    <members>WorkCoaching-Coaching Layout</members>
+    <members>WorkFeedback-Feedback Layout</members>
+    <members>WorkFeedback-Feedback Layout - Summer %2715</members>
+    <members>WorkFeedback-Feedback Layout - Winter %2716</members>
+    <members>WorkFeedbackQuestion-Feedback Question Layout</members>
+    <members>WorkFeedbackQuestion-Feedback Question Layout - Summer %2715</members>
+    <members>WorkFeedbackQuestion-Feedback Question Layout - Winter %2716</members>
+    <members>WorkFeedbackQuestionSet-Feedback Question Set Layout</members>
+    <members>WorkFeedbackQuestionSet-Feedback Question Set Layout - Summer %2715</members>
+    <members>WorkFeedbackQuestionSet-Feedback Question Set Layout - Winter %2716</members>
+    <members>WorkFeedbackRequest-Feedback Request Layout</members>
+    <members>WorkFeedbackRequest-Feedback Request Layout - Summer %2715</members>
+    <members>WorkFeedbackRequest-Feedback Request Layout - Winter %2716</members>
+    <members>WorkFeedbackTemplate-Feedback Template Layout</members>
+    <members>WorkOrder-Work Order Layout</members>
+    <members>WorkOrderLineItem-Work Order Line Item Layout</members>
+    <members>WorkPerformanceCycle-Performance Cycle Layout</members>
+    <members>WorkPerformanceCycle-Performance Cycle Layout - Summer %2715</members>
+    <members>WorkPerformanceCycle-Performance Cycle Layout - Winter %2716</members>
+    <members>WorkReward-Reward Layout</members>
+    <members>WorkRewardFund-Reward Fund Layout</members>
+    <members>WorkRewardFundType-Reward Fund Type Layout</members>
+    <members>WorkThanks-Thanks Layout</members>
+  </types>
+  <types>
+    <name>CustomObject</name>
+    <members>Customer__c</members>
+    <members>Employee__c</members>
+    <members>Product__c</members>
+    <members>Store_Owner__c</members>
+    <members>Store__c</members>
+    <members>Supplier_Order__c</members>
+    <members>Supplier__c</members>
+    <members>Transaction__c</members>
+  </types>
+  <types>
+    <name>CustomField</name>
+    <members>Customer__c.City__c</members>
+    <members>Customer__c.Credit_Card_Expiration_Month__c</members>
+    <members>Customer__c.Credit_Card_Expiration_Year__c</members>
+    <members>Customer__c.Credit_Card_Number__c</members>
+    <members>Customer__c.Credit_Card_Type__c</members>
+    <members>Customer__c.Email__c</members>
+    <members>Customer__c.First_Name__c</members>
+    <members>Customer__c.Last_Name__c</members>
+    <members>Customer__c.Phone__c</members>
+    <members>Customer__c.Ship_to_Billing_Address__c</members>
+    <members>Customer__c.Shipping_City__c</members>
+    <members>Customer__c.Shipping_State__c</members>
+    <members>Customer__c.Shipping_Street__c</members>
+    <members>Customer__c.Shipping_Zip_Code__c</members>
+    <members>Customer__c.State__c</members>
+    <members>Customer__c.Street_Address__c</members>
+    <members>Customer__c.Work_Order__c</members>
+    <members>Customer__c.Zip__c</members>
+    <members>Employee__c.Active__c</members>
+    <members>Employee__c.City__c</members>
+    <members>Employee__c.Country__c</members>
+    <members>Employee__c.Degree_Received__c</members>
+    <members>Employee__c.Email__c</members>
+    <members>Employee__c.First_Name__c</members>
+    <members>Employee__c.GPA__c</members>
+    <members>Employee__c.Last_Name__c</members>
+    <members>Employee__c.Phone__c</members>
+    <members>Employee__c.Position__c</members>
+    <members>Employee__c.School_Attended__c</members>
+    <members>Employee__c.Social_Security_Number__c</members>
+    <members>Employee__c.State__c</members>
+    <members>Employee__c.Store__c</members>
+    <members>Employee__c.Street_Address__c</members>
+    <members>Employee__c.Zip__c</members>
+    <members>Product__c.Description__c</members>
+    <members>Product__c.Durability__c</members>
+    <members>Product__c.Health_Restored__c</members>
+    <members>Product__c.Inventory__c</members>
+    <members>Product__c.Name__c</members>
+    <members>Product__c.Store__c</members>
+    <members>Product__c.Weight__c</members>
+    <members>Store_Owner__c.Email__c</members>
+    <members>Store_Owner__c.First_Name__c</members>
+    <members>Store_Owner__c.Last_Name__c</members>
+    <members>Store_Owner__c.Phone__c</members>
+    <members>Store_Owner__c.Store__c</members>
+    <members>Store__c.City__c</members>
+    <members>Store__c.Phone__c</members>
+    <members>Store__c.State__c</members>
+    <members>Store__c.Store_Owner__c</members>
+    <members>Store__c.Street_Address__c</members>
+    <members>Store__c.Zip__c</members>
+    <members>Supplier_Order__c.Cost__c</members>
+    <members>Supplier_Order__c.Item__c</members>
+    <members>Supplier_Order__c.Order_Number__c</members>
+    <members>Supplier_Order__c.Quantity__c</members>
+    <members>Supplier_Order__c.Shipping_Address__c</members>
+    <members>Supplier_Order__c.Store__c</members>
+    <members>Supplier_Order__c.Supplier__c</members>
+    <members>Supplier_Order__c.Tax_Rate__c</members>
+    <members>Supplier_Order__c.Total_Cost__c</members>
+    <members>Supplier__c.City__c</members>
+    <members>Supplier__c.Email__c</members>
+    <members>Supplier__c.Phone__c</members>
+    <members>Supplier__c.State__c</members>
+    <members>Supplier__c.Street_Address__c</members>
+    <members>Supplier__c.Zip__c</members>
+    <members>Transaction__c.Customer__c</members>
+    <members>Transaction__c.Store__c</members>
+  </types>
+  <types>
+    <name>ListView</name>
+    <members>Customer__c.All</members>
+    <members>Employee__c.All</members>
+    <members>Product__c.All</members>
+    <members>Store_Owner__c.All</members>
+    <members>Store__c.All</members>
+    <members>Supplier_Order__c.All</members>
+    <members>Supplier__c.All</members>
+    <members>Transaction__c.All</members>
+  </types>
+  <types>
+    <name>ValidationRule</name>
+    <members>Customer__c.Card_American_Express_Format</members>
+    <members>Customer__c.Must_Have_a_CC</members>
+    <members>Customer__c.Visa_Mastercard_Discover_Formatting</members>
+    <members>Supplier_Order__c.NameIsRequired</members>
+    <members>Supplier_Order__c.Tax_Rate_Rule</members>
+  </types>
+  <types>
+    <name>RecordType</name>
+    <members>Product__c.Consumable</members>
+    <members>Product__c.Health_Item</members>
+    <members>Product__c.Weapon</members>
+  </types>
+  <types>
+    <name>ApexPage</name>
+    <members>newPage</members>
+    <members>supplierPage</members>
+  </types>
+  <types>
+    <name>Profile</name>
+    <members>Admin</members>
+    <members>Analytics Cloud Integration User</members>
+    <members>Analytics Cloud Security User</members>
+    <members>Authenticated Website</members>
+    <members>Chatter External User</members>
+    <members>Chatter Free User</members>
+    <members>Chatter Moderator User</members>
+    <members>ContractManager</members>
+    <members>Cross Org Data Proxy User</members>
+    <members>Custom%3A Executive</members>
+    <members>Custom%3A HR</members>
+    <members>Custom%3A Marketing Profile</members>
+    <members>Custom%3A Recruiter</members>
+    <members>Custom%3A Sales Profile</members>
+    <members>Custom%3A Support Profile</members>
+    <members>Custom%3ACEO</members>
+    <members>Customer Community Login User</members>
+    <members>Customer Community Plus Login User</members>
+    <members>Customer Community Plus User</members>
+    <members>Customer Community User</members>
+    <members>Customer Portal Manager Custom</members>
+    <members>Customer Portal Manager Standard</members>
+    <members>External Apps Login User</members>
+    <members>External Identity User</members>
+    <members>Force%2Ecom - App Subscription User</members>
+    <members>Force%2Ecom - Free User</members>
+    <members>Gold Partner User</members>
+    <members>High Volume Customer Portal User</members>
+    <members>HighVolumePortal</members>
+    <members>Identity User</members>
+    <members>MarketingProfile</members>
+    <members>Minimum Access - Salesforce</members>
+    <members>Partner App Subscription User</members>
+    <members>Partner Community Login User</members>
+    <members>Partner Community User</members>
+    <members>PlatformPortal</members>
+    <members>ReadOnly</members>
+    <members>Silver Partner User</members>
+    <members>SolutionManager</members>
+    <members>Standard</members>
+    <members>StandardAul</members>
+    <members>Work%2Ecom Only User</members>
+  </types>
+  <types>
+    <name>CustomTab</name>
+    <members>Customer__c</members>
+    <members>Employee__c</members>
+    <members>Product__c</members>
+    <members>Store_Owner__c</members>
+    <members>Store__c</members>
+    <members>Supplier_Order__c</members>
+    <members>Supplier__c</members>
+    <members>Transaction__c</members>
+  </types>
+  <version>52.0</version>
+</Package>

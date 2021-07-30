@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <allowInChatterGroups>false</allowInChatterGroups>
+    
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    
+    <deploymentStatus>Deployed</deploymentStatus>
+    
+    <enableActivities>true</enableActivities>
+    
+    <enableBulkApi>true</enableBulkApi>
+    
+    <enableFeeds>false</enableFeeds>
+    
+    <enableHistory>true</enableHistory>
+    
+    <enableLicensing>false</enableLicensing>
+    
+    <enableReports>true</enableReports>
+    
+    <enableSearch>true</enableSearch>
+    
+    <enableSharing>true</enableSharing>
+    
+    <enableStreamingApi>true</enableStreamingApi>
+    
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    
+    <label>Supplier Order</label>
+    
+    <nameField>
+        
+        <label>Supplier Order Name</label>
+        
+        <trackHistory>true</trackHistory>
+        
+        <type>Text</type>
+        
+    </nameField>
+    
+    <pluralLabel>Supplier Orders</pluralLabel>
+    
+    <searchLayouts>
+        
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        
+        <customTabListAdditionalFields>Cost__c</customTabListAdditionalFields>
+        
+        <searchResultsAdditionalFields>Cost__c</searchResultsAdditionalFields>
+        
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        
+        <searchResultsAdditionalFields>Store__c</searchResultsAdditionalFields>
+        
+    </searchLayouts>
+    
+    <sharingModel>ControlledByParent</sharingModel>
+    
+    <visibility>Public</visibility>
+    
+<fields>
+        <fullName>Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        
+    <fullName>Item__c</fullName>
+        
+    <description>The item name is the name of item the supplier</description>
+        
+    <externalId>false</externalId>
+        
+    <label>Item Name</label>
+        
+    <length>20</length>
+        
+    <required>true</required>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Text</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <fields>
+        
+    <fullName>Order_Number__c</fullName>
+        
+    <description>This is intended to truck the order number, unique number.</description>
+        
+    <displayFormat>{YYYY}{MM}-{0}</displayFormat>
+        
+    <externalId>true</externalId>
+        
+    <label>Order Number</label>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>AutoNumber</type>
+        
+</fields>
+    <fields>
+        
+    <fullName>Quantity__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Quantity</label>
+        
+    <precision>18</precision>
+        
+    <required>false</required>
+        
+    <scale>0</scale>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Number</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <fields>
+        
+    <fullName>Shipping_Address__c</fullName>
+        
+    <caseSensitive>false</caseSensitive>
+        
+    <externalId>false</externalId>
+        
+    <label>Shipping Address</label>
+        
+    <length>100</length>
+        
+    <required>false</required>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Text</type>
+        
+    <unique>true</unique>
+        
+</fields>
+    <fields>
+        
+    <fullName>Store__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Store</label>
+        
+    <referenceTo>Store__c</referenceTo>
+        
+    <relationshipLabel>Supplier Orders</relationshipLabel>
+        
+    <relationshipName>Supplier_Orders</relationshipName>
+        
+    <relationshipOrder>0</relationshipOrder>
+        
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+        
+    <trackHistory>true</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>MasterDetail</type>
+        
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        
+</fields>
+    <fields>
+        
+    <fullName>Supplier__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Supplier</label>
+        
+    <referenceTo>Supplier__c</referenceTo>
+        
+    <relationshipLabel>Supplier Orders</relationshipLabel>
+        
+    <relationshipName>Supplier_Orders</relationshipName>
+        
+    <relationshipOrder>1</relationshipOrder>
+        
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+        
+    <trackHistory>true</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>MasterDetail</type>
+        
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        
+</fields>
+    <fields>
+        
+    <fullName>Tax_Rate__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Tax Rate</label>
+        
+    <precision>18</precision>
+        
+    <required>false</required>
+        
+    <scale>0</scale>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Percent</type>
+        
+</fields>
+    <fields>
+        
+    <fullName>Total_Cost__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <formula>(Cost__c  *  Quantity__c)  + (Tax_Rate__c * ( Cost__c  * Quantity__c) )</formula>
+        
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        
+    <label>Total Cost</label>
+        
+    <precision>18</precision>
+        
+    <required>false</required>
+        
+    <scale>2</scale>
+        
+    <trackHistory>false</trackHistory>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Number</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <validationRules>
+        
+    <fullName>NameIsRequired</fullName>
+        
+    <active>true</active>
+        
+    <errorConditionFormula>ISBLANK( Name )</errorConditionFormula>
+        
+    <errorDisplayField>Name</errorDisplayField>
+        
+    <errorMessage>The supplier Order Name is required</errorMessage>
+        
+</validationRules>
+    <validationRules>
+        
+    <fullName>Tax_Rate_Rule</fullName>
+        
+    <active>true</active>
+        
+    <errorConditionFormula>(Tax_Rate__c  &lt; 0.04 &amp;&amp;  Tax_Rate__c &gt; 0.1)</errorConditionFormula>
+        
+    <errorDisplayField>Cost__c</errorDisplayField>
+        
+    <errorMessage>Please check the tax rate so Tax rate must be greater than 4% or less than 10%</errorMessage>
+        
+</validationRules>
+    <listViews>
+        
+    <fullName>All</fullName>
+        
+    <filterScope>Everything</filterScope>
+        
+    <label>All</label>
+        
+</listViews>
+</CustomObject>
