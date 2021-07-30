@@ -99,14 +99,12 @@ public class Supplier {
         for(Supplier_Order__c c:supers ){
                 Supplier_Order__c cnts= new Supplier_Order__c(); 
                 cnts.Name = c.Name;
-                cnts.Supplier__c = c.Supplier__c;
+               // cnts.Supplier__c = c.Supplier__c;
                 cnts.Store__c = c.Store__c;
                 cnts.Cost__c = c.Cost__c;
                 cnts.Quantity__c=c.Quantity__c;
-                 
-               
                  cnts.Shipping_Address__c = c.Shipping_Address__c;
-                 cnts.Item__c = c.Item__c;
+                 //cnts.Item__c = c.Item__c;
                 s.add(cnts);   
         } }
     

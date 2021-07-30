@@ -1,5 +1,17 @@
-<apex:page controller="Supplier" sidebar="false" showHeader="false">
-   
+<apex:page controller="Supplier"
+           sidebar="false"
+           showHeader="false"
+           docType="html-5.0"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+          >
+   <html>
+       <head>
+           <apex:slds rendered="{! $User.UITheme == 'Theme4d' }"/>
+       </head>
+       <body class="slds-scope">
+               
+        
     <apex:form >
     <apex:pageBlock title="SUPPLIER ORDER " rendered="true" >
         <apex:pageBlockSection columns="1" >
@@ -27,12 +39,14 @@
     <apex:form >
     
     <apex:pageBlock title="Supplier Order details">
-        <apex:pageBlockButtons >
+      
             <apex:commandButton action="{!getContact}" value="view Orders" />
-        </apex:pageBlockButtons>
+       
      </apex:pageBlock>
         
     
     </apex:form>
-     
+    
+       </body>
+    </html>
 </apex:page>
