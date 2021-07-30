@@ -9,6 +9,7 @@
 .vscode/
 config/
 scripts/
+manifest/
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
@@ -45,7 +46,8 @@ $RECYCLE.BIN/
 .eslintignore
 .forceignore
 .prettierignore
-.prettierrrc
+.prettierrc
 .swift-sfdc.json
 jest.config.js
 sfdx-project.json
+package.json
