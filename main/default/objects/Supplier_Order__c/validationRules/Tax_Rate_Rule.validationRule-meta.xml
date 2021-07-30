@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Tax_Rate_Rule</fullName>
-    <active>true</active>
-    <errorConditionFormula>(Tax_Rate__c  &lt; 0.04 &amp;&amp;  Tax_Rate__c &gt; 0.1)</errorConditionFormula>
-    <errorDisplayField>Cost__c</errorDisplayField>
-    <errorMessage>Please check the tax rate so Tax rate must be greater than 4% or less than 10%</errorMessage>
-</ValidationRule>
