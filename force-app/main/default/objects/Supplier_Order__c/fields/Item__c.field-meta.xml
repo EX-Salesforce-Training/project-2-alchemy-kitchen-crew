@@ -5,16 +5,36 @@
     <externalId>false</externalId>
     <label>Item Name</label>
     <required>false</required>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>compter</fullName>
+                <fullName>computer</fullName>
                 <default>false</default>
-                <label>compter</label>
+                <label>computer</label>
+            </value>
+            <value>
+                <fullName>toys</fullName>
+                <default>false</default>
+                <label>toys</label>
+            </value>
+            <value>
+                <fullName>shoes</fullName>
+                <default>false</default>
+                <label>shoes</label>
+            </value>
+            <value>
+                <fullName>garden</fullName>
+                <default>false</default>
+                <label>garden</label>
+            </value>
+            <value>
+                <fullName>food</fullName>
+                <default>false</default>
+                <label>food</label>
             </value>
         </valueSetDefinition>
     </valueSet>
