@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
-        <apexClass>Supplier</apexClass>
+        <apexClass>SupplierOrder</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -278,6 +278,16 @@
         <editable>false</editable>
         <field>Supplier_Order__c.Shipping_Address__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Supplier_Order__c.Store__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Supplier_Order__c.Supplier__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -602,7 +612,23 @@
         <layout>Supplier_Order__c-Supplier Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Supplier_Order__c-Supplier Order Layout</layout>
+        <recordType>Supplier_Order__c.ItemsChoos</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Supplier_Order__c-Supplier Order Layout</layout>
+        <recordType>Supplier_Order__c.Supplier_Record</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Supplier_Order__c-Supplier Order Layout</layout>
+        <recordType>Supplier_Order__c.choose</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Supplier__c-Supplier Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Supplier__c-Supplier Layout</layout>
+        <recordType>Supplier__c.Pick_Supplier</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Task-Task Layout</layout>
@@ -677,10 +703,6 @@
         <layout>WorkThanks-Thanks Layout</layout>
     </layoutAssignments>
     <pageAccesses>
-        <apexPage>newPage</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>supplierPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -697,6 +719,26 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Product__c.Weapon</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Supplier_Order__c.ItemsChoos</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Supplier_Order__c.Supplier_Record</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Supplier_Order__c.choose</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Supplier__c.Pick_Supplier</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
@@ -720,7 +762,7 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>Supplier_Order</tab>
+        <tab>Supplier_Order__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

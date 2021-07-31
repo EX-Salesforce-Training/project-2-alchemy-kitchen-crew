@@ -1,52 +1,35 @@
-<apex:page controller="Supplier"
+<apex:page controller="SupplierOrder"
            sidebar="false"
            showHeader="false"
            docType="html-5.0"
            applyBodyTag="false"
            applyHtmlTag="false"
           >
-   <html>
-       <head>
-           <apex:slds rendered="{! $User.UITheme == 'Theme4d' }"/>
-       </head>
-       <body class="slds-scope">
-               
-        
-    <apex:form >
+<apex:form >
     <apex:pageBlock title="SUPPLIER ORDER " rendered="true" >
         <apex:pageBlockSection columns="1" >
-             <apex:inputText label="Supplier Name" value="{!sup.Name}"/>
-             <apex:inputText label="Supplier" value="{!sup.Supplier__c}"/>
-            <apex:inputText label="Store" value="{!sup.Store__c}"/>
-            <apex:inputText label="Item Price" value="{!sup.Cost__c}"/>
-              <apex:inputText label="Quantities" value="{!sup.Quantity__c}"/>
-            <apex:inputText label="Order Number" value="{!sup.Order_Number__c}" />
-            <apex:inputText label="Total Cost" value="{!sup.Total_Cost__c}" size="4"/>
-             <apex:inputText label="Shipping Address" value="{!sup.Shipping_Address__c}" />
-             
+             	<apex:inputText label="Supplier Name" value="{!sup.Name}"/>
+             	<apex:selectList label="Supplier" value="{!sup.Supplier__c}"/>
+            	 	<apex:selectOptions value="{!Supplier}"/>
+            	<apex:selectList label="Store" value="{!sup.Store__c}"/>
+             		<apex:selectOptions value="{!Store}"/>
+            	<apex:inputText label="Item Price" value="{!sup.Cost__c}"/>
+              	<apex:inputText label="Quantities" value="{!sup.Quantity__c}"/>
+            	<apex:inputText label="Tax Rate" value="{!sup.Tax_Rate__c}"/>
+            	<apex:inputText label="Order Number" value="{!sup.Order_Number__c}" />
+             	<apex:inputText label="Shipping Address" value="{!sup.Shipping_Address__c}" />
 				<apex:selectList label="Select Item Name" value="{!sup.Item__c}"  >             
-              <apex:selectOption />
-            </apex:selectList>
+              		<apex:selectOptions value="{!Item}"/>
+            	</apex:selectList>
         </apex:pageBlockSection>
-        <apex:pageBlockButtons >
-        <apex:commandButton action="{!getData}" value="save"/>
-        
-        </apex:pageBlockButtons>
-        
+        		<apex:pageBlockButtons >
+        				<apex:commandButton action="{!getData}" value="save"/>
+        		</apex:pageBlockButtons>
         </apex:pageBlock>
-        
-    </apex:form>
+        </apex:form>
     <apex:form >
-    
     <apex:pageBlock title="Supplier Order details">
-      
-            <apex:commandButton action="{!getContact}" value="view Orders" />
-       
-     </apex:pageBlock>
-        
-    
-    </apex:form>
-    
-       </body>
-    </html>
-</apex:page>
+      <apex:commandButton action="{!getContact}" value="view Orders" />
+       </apex:pageBlock>
+     </apex:form>
+ </apex:page>
