@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Supplier__c</fullName>
+    <fullName>Transaction__c</fullName>
     <externalId>false</externalId>
-    <label>Supplier</label>
-    <referenceTo>Supplier__c</referenceTo>
-    <relationshipLabel>Supplier Orders</relationshipLabel>
-    <relationshipName>Supplier_Orders</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <label>Transaction</label>
+    <referenceTo>Transaction__c</referenceTo>
+    <relationshipLabel>Receipts</relationshipLabel>
+    <relationshipName>Receipts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

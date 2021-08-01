@@ -160,7 +160,6 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Suppliers</pluralLabel>
-    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
