@@ -1,0 +1,36 @@
+<apex:page controller="TransactionController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputText label="Transaction #" value="{!myInput}"/>
+    			<apex:commandButton action="{!search}" value="Search"/>
+            </apex:pageBlockSection>
+            
+            <br/>
+            <h1>RECEIPT</h1>
+            <br/>
+            
+            <apex:pageBlockSection columns="1">
+                <h2>Thank you for shopping at The Shopping Dead!</h2>
+                <apex:outputText value="{!trans.Store__r.Name}"/>
+                <apex:outputText value="{!trans.Name}"/>
+                <apex:outputText value="{!trans.Date_Time__c}"/>
+            </apex:pageBlockSection>
+            <br/>
+            
+            <apex:pageBlockTable value="{!trans.Receipts__r}" var="tr">
+                <apex:column value="{!tr.Product__r.ProductCode}"/>
+                <apex:column value="{!tr.Product__r.Name}"/>
+                <apex:column value="{!tr.Product__r.Price__c}"/>
+            </apex:pageBlockTable>
+            <br/>
+            
+            <apex:pageBlockSection columns="1">
+                <apex:outputField value="{!trans.Sub_Total__c}"/>
+                <apex:outputField value="{!trans.Tax__c}"/>
+                <apex:outputField value="{!trans.Total__c}"/>
+            </apex:pageBlockSection>
+                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

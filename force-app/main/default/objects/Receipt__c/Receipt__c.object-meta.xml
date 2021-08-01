@@ -143,23 +143,24 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
+    <enableReports>false</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Supplier Order</label>
+    <label>Receipt</label>
     <nameField>
-        <label>Supplier Order Name</label>
+        <displayFormat>RId-{0000}</displayFormat>
+        <label>Receipt ID</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Supplier Orders</pluralLabel>
+    <pluralLabel>Receipts</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
