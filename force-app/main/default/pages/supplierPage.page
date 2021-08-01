@@ -1,12 +1,9 @@
-<apex:page controller="SupplierOrder"
-           sidebar="false"
-           showHeader="false"
-           docType="html-5.0"
-           applyBodyTag="false"
-           applyHtmlTag="false"
-          >
+<apex:page controller="SupplierOrder" >
 <apex:form >
-    <apex:pageBlock title="SUPPLIER ORDER " rendered="true" >
+    
+   <apex:image url="{!URLFOR($Resource.final)}" width="670" height="136"/> 
+    <apex:pageBlock rendered="true" >
+        
         <apex:pageBlockSection columns="1" >
              	<apex:inputText label="Supplier Name" value="{!sup.Name}"/>
              	<apex:selectList label="Supplier" value="{!sup.Supplier__c}"/>
@@ -25,8 +22,10 @@
         				<apex:commandButton action="{!getData}" value="save"/>
         		</apex:pageBlockButtons>
         </apex:pageBlock>
-        </apex:form>
+        </apex:form> 
+    <apex:image url="{!URLFOR($Resource.final2)}" width="670" height="60"/>
     <apex:form >
+       
     <apex:pageBlock title="SUPPLIER ORDER DETAILS">
         <apex:pageBlockTable value="{!s}" var="p">
             

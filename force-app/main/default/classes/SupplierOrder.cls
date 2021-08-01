@@ -2,10 +2,10 @@
  * Author: Endalkachew Filfilu
  * Date: 07/28/2021
  * The intent: The supplier order is custom object
- * This class will access the custom Object and its fields
- * the task will be implementing the visualpage that displays
- * allow to creat a new record and submit. It also allow the records
-   view on the same visualforce page
+ * This class will access the custom Object and its fields.
+ * The task will be implementing the visualpage that 
+ * allowS to create a new record and submit. It also allows the records
+   appear on the same visualforce page.
 	
 -----------------------------------------------------------------------
 */
