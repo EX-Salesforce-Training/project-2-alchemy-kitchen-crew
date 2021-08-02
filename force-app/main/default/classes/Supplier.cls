@@ -9,35 +9,13 @@ public class Supplier {
         s= new List<Supplier_Order__c>();
         s.add(cont);
     }
-     public List<SelectOption> getName(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Name.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        
-        return ListOption;
-    }
-     public List<SelectOption> getTotal(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Total_Cost__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        
-        return ListOption;
-    }
     public List<SelectOption> getStore(){
         List<SelectOption> listOption = new List<SelectOption>();
         List<Schema.PicklistEntry> listItems = Supplier_Order__c.Store__c.getDescribe().getPickListValues();
         for(Schema.PicklistEntry sc: listItems){
             listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
         }
-        
-        
-        return ListOption;
+       return ListOption;
     }
 	
     public List<SelectOption> getItem(){
@@ -50,9 +28,10 @@ public class Supplier {
         
         return ListOption;
     }
-    public List<SelectOption> getQuantities(){
+  
+    public List<SelectOption> getSupplier(){
         List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Quantity__c.getDescribe().getPickListValues();
+        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Supplier__c.getDescribe().getPickListValues();
         for(Schema.PicklistEntry sc: listItems){
             listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
         }
@@ -60,9 +39,10 @@ public class Supplier {
         
         return ListOption;
     }
-    public List<SelectOption> getShiping(){
+    
+    public List<SelectOption> getTax(){
         List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Shipping_Address__c.getDescribe().getPickListValues();
+        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Tax_Rate__c.getDescribe().getPickListValues();
         for(Schema.PicklistEntry sc: listItems){
             listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
         }
@@ -70,26 +50,9 @@ public class Supplier {
         
         return ListOption;
     }
-    public List<SelectOption> getOrderNumber(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Order_Number__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
+  
         
-        
-        return ListOption;
-    } public List<SelectOption> getCost(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Cost__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        
-        return ListOption;
-    }
-    public void getData(){
+     public void getData(){
              insert sup;
         
     }

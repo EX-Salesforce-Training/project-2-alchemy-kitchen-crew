@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Visa_Mastercard_Discover_Formatting</fullName>
-    <active>true</active>
+    <active>false</active>
     <description>Formats the card number to ####-####-####-#### when it is Visa, Mastercard, or Discover</description>
     <errorConditionFormula>NOT(ISPICKVAL(Credit_Card_Type__c, &quot;American Express&quot;)) &amp;&amp; 
 NOT(REGEX(Credit_Card_Number__c, &quot;[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}&quot;))</errorConditionFormula>

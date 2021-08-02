@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Closes</fullName>
+        <default>false</default>
+        <label>Closes</label>
+    </customValue>
+    <customValue>
+        <fullName>computer</fullName>
+        <default>true</default>
+        <label>computer</label>
+    </customValue>
+    <customValue>
+        <fullName>Food</fullName>
+        <default>false</default>
+        <label>Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Garden</fullName>
+        <default>false</default>
+        <label>Garden</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoes</fullName>
+        <default>false</default>
+        <label>Shoes</label>
+    </customValue>
+    <customValue>
+        <fullName>Toys</fullName>
+        <default>false</default>
+        <label>Toys</label>
+    </customValue>
+    <masterLabel>Items</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>
