@@ -1,4 +1,4 @@
-public class TransactionController {
+global with sharing class TransactionController {
     public Transaction__c trans {get;set;}
     public String myInput{get;set;}
   	public String myOutput{get;set;}
@@ -29,7 +29,7 @@ public class TransactionController {
             subTotal += r.Product__r.Price__c;
         }
         
-        //Calculate tax ansd total from sub-total
+        //Calculate tax and total from sub-total
         Decimal tax = subTotal * 0.075;
         Decimal total = subTotal + tax;
         
