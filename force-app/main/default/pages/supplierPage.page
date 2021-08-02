@@ -1,33 +1,73 @@
-<apex:page controller="SupplierOrder" >
-<apex:form >
-    
-   <apex:image url="{!URLFOR($Resource.final)}" width="670" height="136"/> 
-    <apex:pageBlock rendered="true" >
+<apex:page controller="SupplierOrder"  standardStylesheets="true" >
+  <!-- ========================CSS====================================== -->    
+    <apex:slds />
+      <style>
+        .supl{
+          background-color: grey;
+          padding-left:2em;
+          padding-bottom:0.5em;
+          } 
+         .supl2{
+          background-color:grey;
+          padding-left:2em;
+          padding-bottom:0.5em;
+          padding-top:0.5em;
+          }  
+       .spp{
+        color:yellow;
+        font-size: 2em;
+        font-weight:bold;
+        margin-left: 3.5em;
         
+        } 
+       .sample { font-weight:bold;
+                  color:white;
+          	      margin-left: 1em;
+                font-size:2.5em;}
+        .sample2 { font-weight:bold;
+                  color:white;
+          	      margin-left: 1em;
+                  font-size:2em;}
+        
+          .bPageBlock{background-color:#e0edf5 !important;
+      
+       </style>
+<!-- ================================CSS=========================================== -->    
+   <div class="supl"> 
+      <apex:image url="{!URLFOR($Resource.lolo)}" width="50" height="50" />
+      <apex:outputText value="SUPPLIER ORDER" styleClass="sample"/>            
+    </div>
+<apex:form >
+   <!--<apex:image url="{!URLFOR($Resource.final)}" width="670" height="136" rendered="true"/>-->
+    <apex:pageBlock rendered="true" >
         <apex:pageBlockSection columns="1" >
-             	<apex:inputText label="Supplier Name" value="{!sup.Name}"/>
-             	<apex:selectList label="Supplier" value="{!sup.Supplier__c}"/>
-            	 	<apex:selectOptions value="{!Supplier}"/>
-            	<apex:selectList label="Store" value="{!sup.Store__c}"/>
-             		<apex:selectOptions value="{!Store}"/>
-            	<apex:inputText label="Item Price" value="{!sup.Cost__c}"/>
-              	<apex:inputText label="Quantities" value="{!sup.Quantity__c}"/>
-            	<apex:inputText label="Tax Rate" value="{!sup.Tax_Rate__c}"/>
-               	<apex:inputText label="Shipping Address" value="{!sup.Shipping_Address__c}" />
-				<apex:selectList label="Select Item Name" value="{!sup.Item__c}"  >             
-              		<apex:selectOptions value="{!Item}"/>
-            	</apex:selectList>
+                <apex:inputText label="Supplier Name" value="{!sup.Name}"/>
+                <apex:selectList label="Supplier" value="{!sup.Supplier__c}"/>
+                    <apex:selectOptions value="{!Supplier}"/>
+                <apex:selectList label="Store" value="{!sup.Store__c}"/>
+                    <apex:selectOptions value="{!Store}"/>
+                <apex:inputText label="Item Price" value="{!sup.Cost__c}"/>
+                <apex:inputText label="Quantities" value="{!sup.Quantity__c}"/>
+                <apex:inputText label="Tax Rate" value="{!sup.Tax_Rate__c}"/>
+                <apex:inputText label="Shipping Address" value="{!sup.Shipping_Address__c}" />
+                <apex:selectList label="Select Item Name" value="{!sup.Item__c}"  >             
+                    <apex:selectOptions value="{!Item}"/>
+                </apex:selectList>
         </apex:pageBlockSection>
-        		<apex:pageBlockButtons >
-        				<apex:commandButton action="{!getData}" value="save"/>
-        		</apex:pageBlockButtons>
+                <apex:pageBlockButtons >
+                        <apex:commandButton action="{!getData}" value="save"/>
+                </apex:pageBlockButtons>
         </apex:pageBlock>
         </apex:form> 
-    <apex:image url="{!URLFOR($Resource.final2)}" width="670" height="60"/>
+     
     <apex:form >
-       
-    <apex:pageBlock title="SUPPLIER ORDER DETAILS">
-        <apex:pageBlockTable value="{!s}" var="p">
+         <div class="supl2"> 
+      <apex:image url="{!URLFOR($Resource.lolo)}" width="50" height="50" />
+      <apex:outputText value="SUPPLIER ORDER DETAILS" styleClass="sample2"/>            
+    </div>
+    <apex:pageBlock >
+        
+        <apex:pageBlockTable value="{!s}" var="p" >
             
                  <apex:column value="{!p.Name}"/>
                  <apex:column value="{!p.Supplier__c}"/>
@@ -37,11 +77,11 @@
                  <apex:column value="{!p.Order_Number__c}"/>
                  <apex:column value="{!p.Shipping_Address__c}"/>
                  <apex:column value="{!p.Item__c}"/>
-            	
+                
             
             </apex:pageBlockTable>
         <apex:pageBlockButtons >
-             <apex:commandButton action="{!getContact}" value="view Orders" />
+             <apex:commandButton action="{!getContact}" value="View Orders" />
         </apex:pageBlockButtons>
        </apex:pageBlock>
      </apex:form>
