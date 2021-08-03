@@ -9,8 +9,7 @@
 	
 -----------------------------------------------------------------------
 */
-
-
+//test the change for github
 public class SupplierOrder {
     INTEGER i=0;
     Supplier_Order__c cont = new Supplier_Order__c();
@@ -29,9 +28,7 @@ public class SupplierOrder {
 /*
  * --------------------------------------------------------------
  * The store has a look-up relationship with supplier
-
  * it will be given picklists so user can choose
-
  * ------------------------------------------------------------------
 */
     public List<SelectOption> getStore(){
@@ -44,9 +41,7 @@ public class SupplierOrder {
     }
 /*
  * --------------------------------------------------------------
-
  * The Item custom object ha pick-list type and can allow user to
-
  * pick Items.
  * ------------------------------------------------------------------
 */	
@@ -88,15 +83,7 @@ public class SupplierOrder {
   
         
      public void getData(){
-
-        
-         Database.SaveResult sr= Database.insert(sup, false);
-         if(!sr.isSuccess()){
-             
-            system.debug('Error: Not inserted');
-         }
-         
-
+             insert sup;
         
     }
 //---------------this can list record on the same visualforce page-----------------------------------------------------------------------
@@ -107,18 +94,13 @@ public class SupplierOrder {
                                        Order_Number__c,Total_Cost__c,Shipping_Address__c,
                                        Item__c FROM Supplier_Order__c ];  
         for(Supplier_Order__c c:supers ){
-
-                Supplier_Order__c cnts = new Supplier_Order__c(); 
-
+                Supplier_Order__c cnts= new Supplier_Order__c(); 
                 cnts.Name = c.Name;
                 cnts.Supplier__c = c.Supplier__c;
                 cnts.Store__c = c.Store__c;
                 cnts.Cost__c = c.Cost__c;
             	cnts.Tax_Rate__c = c.Tax_Rate__c;
-
-
-                cnts.Quantity__c = c.Quantity__c;
-
+                cnts.Quantity__c=c.Quantity__c;
                 cnts.Item__c=c.Item__c;
                 cnts.Shipping_Address__c = c.Shipping_Address__c;
                 
