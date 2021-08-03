@@ -707,6 +707,10 @@
         <layout>WorkThanks-Thanks Layout</layout>
     </layoutAssignments>
     <pageAccesses>
+        <apexPage>sldsInPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>supplierPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -776,6 +780,10 @@
     <tabVisibilities>
         <tab>Transaction__c</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>supplier</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Identity</userLicense>
     <userPermissions>
