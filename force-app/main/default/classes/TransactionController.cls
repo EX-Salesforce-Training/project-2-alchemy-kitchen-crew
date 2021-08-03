@@ -12,10 +12,13 @@ global with sharing class TransactionController {
         //Grab and save input from VF page
         myOutput = myInput;
         
-        //Query transaction based on above input
-        trans = [SELECT Name, Store__r.Name, Date_Time__c, 
+        //Check if object is accessible using the schema class
+        if(Schema.SObjectType.Transaction__c.isAccessible()){
+            //Query transaction based on above input
+        	trans = [SELECT Name, Store__r.Name, Date_Time__c, 
                  (SELECT Product__r.ProductCode, Product__r.Name, Product__r.Price__c From Receipts__r) 
                  FROM Transaction__c WHERE Name = :myOutput];
+        }
         
         //Variable to calculate sub-total
         Decimal subTotal = 0;
@@ -28,6 +31,7 @@ global with sharing class TransactionController {
             //Add each products price from receipts to sub-total
             subTotal += r.Product__r.Price__c;
         }
+        
         
         //Calculate tax and total from sub-total
         Decimal tax = subTotal * 0.075;
