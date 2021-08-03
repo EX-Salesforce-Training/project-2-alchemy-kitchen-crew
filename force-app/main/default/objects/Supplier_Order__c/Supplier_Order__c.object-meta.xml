@@ -152,33 +152,16 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Supplier Order</label>
     <nameField>
         <label>Supplier Order Name</label>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Supplier Orders</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <searchLayouts>
-        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Cost__c</customTabListAdditionalFields>
-        <massQuickActions>Supplier</massQuickActions>
-        <searchFilterFields>NAME</searchFilterFields>
-        <searchFilterFields>Item__c</searchFilterFields>
-        <searchFilterFields>Order_Number__c</searchFilterFields>
-        <searchFilterFields>Quantity__c</searchFilterFields>
-        <searchFilterFields>Cost__c</searchFilterFields>
-        <searchFilterFields>Tax_Rate__c</searchFilterFields>
-        <searchFilterFields>Total_Cost__c</searchFilterFields>
-        <searchFilterFields>Shipping_Address__c</searchFilterFields>
-        <searchResultsAdditionalFields>Cost__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Store__c</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <searchLayouts></searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
