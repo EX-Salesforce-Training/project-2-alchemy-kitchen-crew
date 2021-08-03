@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Amazon</fullName>
+        <default>true</default>
+        <label>Amazon</label>
+    </customValue>
+    <customValue>
+        <fullName>JcPeny</fullName>
+        <default>false</default>
+        <label>JcPeny</label>
+    </customValue>
+    <customValue>
+        <fullName>Pony man</fullName>
+        <default>false</default>
+        <label>Pony man</label>
+    </customValue>
+    <customValue>
+        <fullName>Wallmart</fullName>
+        <default>false</default>
+        <label>Wallmart</label>
+    </customValue>
+    <customValue>
+        <fullName>Zinchin</fullName>
+        <default>false</default>
+        <label>Zinchin</label>
+    </customValue>
+    <masterLabel>Suppliers</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

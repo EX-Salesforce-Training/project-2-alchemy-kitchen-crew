@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplier_Record</fullName>
+    <active>true</active>
+    <label>Supplier Record</label>
+    <picklistValues>
+        <picklist>Item__c</picklist>
+        <values>
+            <fullName>computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>shoes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>toys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
