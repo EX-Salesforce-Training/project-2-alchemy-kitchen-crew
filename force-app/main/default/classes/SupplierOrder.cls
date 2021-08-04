@@ -67,9 +67,9 @@ public class SupplierOrder {
 */	
     public List<SelectOption> getItem(){
           List<selectOption> sel = new List<selectOption>();
-        List<Product__c> Listso = new List<Product__c>();
-          Listso= [SELECT Id,Name FROM Product__c];
-                  for(Product__c r: Listso){
+        List<Product2> Listso = new List<Product2>();
+          Listso= [SELECT Id,Name FROM Product2];
+                  for(Product2 r: Listso){
                       sel.add(new selectOption(r.Id,r.Name));
                   }
             
@@ -87,11 +87,11 @@ public class SupplierOrder {
        return sel;
        
     }
-    public List<Product__c> getItems(){
-          List<Product__c> sel = new List<Product__c>();
-        List<Product__c> Listso = new List<Product__c>();
-          Listso= [SELECT Name FROM Product__c];
-                  for(Product__c r: Listso){
+    public List<Product2> getItems(){
+          List<Product2> sel = new List<Product2>();
+        List<Product2> Listso = new List<Product2>();
+          Listso= [SELECT Name FROM Product2];
+                  for(Product2 r: Listso){
                       sel.add(r);
                   }
             
@@ -118,7 +118,7 @@ public class SupplierOrder {
             	cnts.Tax_Rate__c = c.Tax_Rate__c;
                 cnts.Quantity__c=c.Quantity__c;
                 cnts.Item__c=c.Item__c;
-                cnts.Order_Number__c = c.Order_Number__c;
+                //cnts.Order_Number__c = c.Order_Number__c;
                 cnts.Shipping_Address__c = c.Shipping_Address__c;
                 
                 lists.add(cnts);   
