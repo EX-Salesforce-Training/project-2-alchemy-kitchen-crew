@@ -27,9 +27,10 @@ static testMethod void testMethod1(){ // Single Record
     testSupplierOrder.getContact();
     testSupplierOrder.getData();
     testSupplierOrder.getItem();
-    testSupplierOrder.getStore();
-    testSupplierOrder.getSupplier();
     testSupplierOrder.getTax();
+    testSupplierOrder.getStores();
+    testSupplierOrder.getSupplier();
+  
     Test.stopTest();
     }
     //Bulk test will fail for two reasons one is the duplication second
@@ -65,9 +66,10 @@ static testMethod void testMethod1(){ // Single Record
     testSupplierOrder2.getContact();
     testSupplierOrder2.getData();
     testSupplierOrder2.getItem();
-    testSupplierOrder2.getStore();
+    testSupplierOrder2.getStores();
     testSupplierOrder2.getSupplier();
-    testSupplierOrder2.getTax();
+    testSupplierOrder2.getTax();  
+   
 Test.stopTest();
     }
 
