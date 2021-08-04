@@ -6,7 +6,7 @@
 
     <style type="text/css">
         .search{
-            margin-right: 350px;
+            margin-right: 25%;
             margin-bottom: 20px;
             margin-left: 10px;
             padding: 10px;
