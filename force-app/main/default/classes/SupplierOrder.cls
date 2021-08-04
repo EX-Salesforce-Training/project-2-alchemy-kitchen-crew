@@ -12,12 +12,14 @@
 
 public class SupplierOrder {
     INTEGER i=0;
+    public String selct {get;set;}
+    public String selected {get;set;}
+    public String selecto {get;set;}
+    
+    public  Supplier_Order__c sup{get;set;} 
+  	public List<Supplier_Order__c> s{get;set;}
+    
     Supplier_Order__c cont = new Supplier_Order__c();
-   //this is used for insrting data into the custom object
-    public  Supplier_Order__c sup{get;set;}
-    //This is used to pool data from DB
-    public List<Supplier_Order__c> s{get;set;}
-    //This is used for pooling data.
     public List<Supplier_Order__c> lists = new List<Supplier_Order__c>();
     
     Public SupplierOrder (){
@@ -28,16 +30,34 @@ public class SupplierOrder {
 /*
  * --------------------------------------------------------------
  * The store has a look-up relationship with supplier
- * it will be give picklists so user can choose
+ * it will be given picklists so user can choose
  * ------------------------------------------------------------------
 */
-    public List<SelectOption> getStore(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Store__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-       return ListOption;
+   public List<selectOption> getStores(){
+        List<selectOption> sel = new List<selectOption>();
+        List<Store__c> Listss = new List<Store__c>();
+          Listss= [SELECT Id,Name FROM Store__c];
+                  for(Store__c r: Listss){
+                      sel.add(new selectOption(r.Id,r.Name));
+                  }
+            
+       return sel;
+    }
+/*
+ * --------------------------------------------------------------
+ * The Supplier has a master detail with store
+ * it will be give picklists so user can choose suppliers.
+ * ------------------------------------------------------------------
+*/   
+     public List<selectOption> getSupplier(){
+        List<selectOption> sel = new List<selectOption>();
+        List<Supplier__c> Listsed = new List<Supplier__c>();
+          Listsed= [SELECT Id,Name FROM Supplier__c];
+                  for(Supplier__c r: Listsed){
+                      sel.add(new selectOption(r.Id,r.Name));
+                  }
+            
+       return sel;
     }
 /*
  * --------------------------------------------------------------
@@ -46,69 +66,59 @@ public class SupplierOrder {
  * ------------------------------------------------------------------
 */	
     public List<SelectOption> getItem(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Item__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        
-        return ListOption;
+          List<selectOption> sel = new List<selectOption>();
+        List<Product__c> Listso = new List<Product__c>();
+          Listso= [SELECT Id,Name FROM Product__c];
+                  for(Product__c r: Listso){
+                      sel.add(new selectOption(r.Id,r.Name));
+                  }
+            
+       return sel;
+       
+    }   
+     public List<Supplier_Order__c> getTax(){
+          List<Supplier_Order__c> sel = new List<Supplier_Order__c>();
+        List< Supplier_Order__c> Listso = new List<Supplier_Order__c>();
+          Listso= [SELECT Tax_Rate__c FROM Supplier_Order__c];
+                  for( Supplier_Order__c r: Listso){
+                      sel.add(r);
+                  }
+            
+       return sel;
+       
     }
-/*
- * --------------------------------------------------------------
- * The Supplier has a master detail with store
- * it will be give picklists so user can choose suppliers.
- * ------------------------------------------------------------------
-*/  
-    public List<SelectOption> getSupplier(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Supplier__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        return ListOption;
-    }
+    public List<Product__c> getItems(){
+          List<Product__c> sel = new List<Product__c>();
+        List<Product__c> Listso = new List<Product__c>();
+          Listso= [SELECT Name FROM Product__c];
+                  for(Product__c r: Listso){
+                      sel.add(r);
+                  }
+            
+       return sel;
+       
+    }   
     
-    public List<SelectOption> getTax(){
-        List<SelectOption> listOption = new List<SelectOption>();
-        List<Schema.PicklistEntry> listItems = Supplier_Order__c.Tax_Rate__c.getDescribe().getPickListValues();
-        for(Schema.PicklistEntry sc: listItems){
-            listOption.add(new SelectOption(sc.getValue(), sc.getLabel()));
-        }
-        
-        return ListOption;
-    }
-  
-        
-     public void getData(){
-        
-         Database.SaveResult sr= Database.insert(sup, false);
-         if(!sr.isSuccess()){
-             
-            system.debug('Error: Not inserted');
-         }
-         
-             
+	public void getData(){
+             insert sup;
         
     }
 //---------------this can list record on the same visualforce page-----------------------------------------------------------------------
-    
+     //
     public void getContact(){
-      List< Supplier_Order__c> supers=[SELECT Name,Supplier__c, Store__c,
-                                       Tax_Rate__c,Cost__c,Quantity__c, 
-                                       Order_Number__c,Total_Cost__c,Shipping_Address__c,
-                                       Item__c FROM Supplier_Order__c ];  
+      List< Supplier_Order__c> supers=[SELECT Name, Store__c,Order_Number__c,Tax_Rate__c,Cost__c,Quantity__c,Total_Cost__c,
+                                       Shipping_Address__c,Supplier__c,Item__c FROM Supplier_Order__c ];  
+       
         for(Supplier_Order__c c:supers ){
-                Supplier_Order__c cnts = new Supplier_Order__c(); 
+                Supplier_Order__c cnts= new Supplier_Order__c(); 
                 cnts.Name = c.Name;
                 cnts.Supplier__c = c.Supplier__c;
                 cnts.Store__c = c.Store__c;
                 cnts.Cost__c = c.Cost__c;
             	cnts.Tax_Rate__c = c.Tax_Rate__c;
-                cnts.Quantity__c = c.Quantity__c;
+                cnts.Quantity__c=c.Quantity__c;
                 cnts.Item__c=c.Item__c;
+                cnts.Order_Number__c = c.Order_Number__c;
                 cnts.Shipping_Address__c = c.Shipping_Address__c;
                 
                 lists.add(cnts);   
