@@ -34,10 +34,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>ApprovalProcess</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>AssignmentRules</name>
 	</types>
 	<types>
@@ -122,10 +118,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>CustomObjectTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>CustomPageWebLink</name>
 	</types>
 	<types>
@@ -194,10 +186,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>GlobalValueSetTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>Group</name>
 	</types>
 	<types>
@@ -207,10 +195,6 @@
 	<types>
 		<members>*</members>
 		<name>HomePageLayout</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>InstalledPackage</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -354,10 +338,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>StandardValueSetTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>StaticResource</name>
 	</types>
 	<types>
@@ -371,10 +351,6 @@
 	<types>
 		<members>*</members>
 		<name>TransactionSecurityPolicy</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Translations</name>
 	</types>
 	<types>
 		<members>*</members>
