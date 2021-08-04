@@ -100,11 +100,13 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Product__c.Store__c</relatedList>
+        <relatedList>Transaction__c.Store__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Transaction__c.Store__c</relatedList>
+        <fields>PRODUCT2.NAME</fields>
+        <fields>PRODUCT2.CUSTOMER_PRODUCT_ID</fields>
+        <fields>PRODUCT2.DESCRIPTION</fields>
+        <relatedList>Product2.Store__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
