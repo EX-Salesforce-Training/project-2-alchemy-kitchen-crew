@@ -1,0 +1,120 @@
+<!--
+Title: CustomerPurchasePage
+Author: Dominic Romanello
+Created: 7/28/21
+Modified: 8/3/21
+Description: Display Customer Information on the page and searches for the customer information if search is clicked.
+The Save button will update or insert the Customer record into the database.
+-->
+
+<apex:page controller="CustomerPurchasePageController" 
+            standardStylesheets="false" 
+            showHeader="false" 
+            sidebar="false" 
+            lightningStylesheets="true">
+
+    <style type="text/css">
+        .search{
+            margin-right: 25%;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            padding: 10px;
+        	background-color: #FEE5B5;
+            border: 5px solid #FECCA8;
+            border-radius:10px;
+        	
+        }
+        .info{
+            margin-right: 200px;
+            margin-left: 10px;
+            margin: 10px;
+            padding: 10px;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        .address{
+            margin: 10px;
+            padding: 10px;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        .credit{
+            margin: 10px;
+            padding: 10px;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        p{
+            font-style: italic;
+            font-size: 12px;
+        	text-align: right;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+
+	<slds/> 
+    <apex:form >
+        <div>
+            <apex:pageBlock >
+                <!-- Search Block -->
+                <h1>Welcome to the Shopping Dead!</h1>
+                <div class="search">
+                    <apex:pageBlockSection title="Returning Customer?" id="search" >
+                        <apex:inputText label="Customer ID" value="{!input}" />
+                        <apex:commandButton action="{!search}" value="Search"/>
+                    </apex:pageBlockSection>
+                </div>
+                <div class="info">
+                    <!-- Customer Contact Info PageBlockSection -->
+                    <apex:pageBlockSection title="Customer Contact Info" id="info" columns="1" collapsible="false">
+                        <apex:outputLabel value="{!customer.Name}"/>
+                        <apex:inputField value="{!customer.First_Name__c}"/>
+                        <apex:inputField value="{!customer.Last_Name__c}"/>
+                        <apex:inputField value="{!customer.Phone__c}"/>
+                        <apex:inputField value="{!customer.Email__c}"/>
+                    </apex:pageBlockSection>
+                </div>
+                <div class="address">
+                    <!-- Customer Address PageBlockSection -->
+                    <apex:pageBlockSection title="Customer Address" id="address" columns="2" collapsible="false">
+                        <apex:inputField value="{!customer.Street_Address__c}"/>
+                        <apex:inputCheckbox label="Is Shipping Address the Same as Billing?" value="{!customer.Ship_to_Billing_Address__c}">
+                            <!-- Checks to see if the checkbox is checked and dynamically changes what's rendered on the page -->
+                            <apex:actionSupport event="onchange" reRender="address" action="{!checkboxUpdate}"/>
+                        </apex:inputCheckbox>
+                        <apex:inputField value="{!customer.City__c}"/>
+                        <apex:outputText label=" " rendered="{! (!shippingRender)}"/>
+                        <apex:inputText value="{!customer.Shipping_Street__c}" label="Shipping Street Address" rendered="{!shippingRender}"/>
+                        <apex:inputField value="{!customer.State__c}"/>
+                        <apex:outputText label=" " rendered="{! (!shippingRender)}"/>
+                        <apex:inputText value="{!customer.Shipping_City__c}" label="Shipping City" rendered="{!shippingRender}"/>
+                        <apex:inputField value="{!customer.Zip__c}"/>
+                        <apex:inputText value="{!customer.Shipping_State__c}" label="Shipping State" rendered="{!shippingRender}"/>
+                        <apex:outputText label=" "/>
+                        <apex:inputText value="{!customer.Shipping_Zip_Code__c}" label="Shipping Zip" rendered="{!shippingRender}"/>
+                    </apex:pageBlockSection>
+                </div>
+                <div class="credit">
+                    <!-- Credit Card Information PageBlockSection -->
+                    <apex:pageBlockSection title="Credit Card Information" id="credit" collapsible="false">
+                        
+                        <apex:inputField value="{!customer.Credit_Card_Type__c}"/>
+                        <apex:inputField value="{!customer.Credit_Card_Number__c}"/>
+                        <apex:inputField value="{!customer.Credit_Card_Expiration_Month__c}"/>
+                        <apex:inputField value="{!customer.Credit_Card_Expiration_Year__c}"/>
+                        <p>*Every Customer must have a Credit Card*</p>
+                    </apex:pageBlockSection>
+                </div>
+                <!-- Save Button -->
+                <div align="right" draggable="false">
+                    <apex:commandButton action="{!save}" value="Save" styleClass="button-style"/>
+                </div>
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>

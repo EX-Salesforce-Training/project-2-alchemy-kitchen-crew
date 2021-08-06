@@ -1,0 +1,95 @@
+<apex:page controller="TransactionController" standardStylesheets="false" showHeader="false" sidebar="false" lightningStylesheets="true">
+    <style type="text/css">
+        #search {
+        	width: 60%;
+        	text-align:center;
+    		font-family: Arial, Helvetica, sans-serif; 
+    		font-size: 24px;
+            margin: auto;
+            padding: 10px;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+		}
+        #header {
+            width: 50%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: black;
+        	margin: auto;
+            padding: 10px;
+            text-align: center;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        .total {
+       		width: 25%;
+        	margin: auto;
+            padding: 10px;
+            text-align: center;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        .table {
+        	width: 35%;
+        	margin: auto;
+            padding: 10px;
+            text-align: center;
+        	background-color: #FECCA8;
+            border: 5px solid #99D4E9;
+            border-radius:10px;
+        }
+        
+    </style>
+    <slds/>
+    
+        <apex:form >
+            <div style="text-align:center;">
+                <apex:pageBlock >
+                    <div id="search">
+                        <apex:pageBlockSection >
+                            <apex:inputText label="Transaction #" value="{!myInput}"/>
+                            <apex:commandButton action="{!search}" value="Search"/>
+                        </apex:pageBlockSection>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div style="color:black;"  id="header">
+                        <apex:pageBlockSection columns="1">
+                            <p style="font-size:48px; color:#99D4E9; font-weight:bold; text-align:center;">RECEIPT</p>
+                            <p style="font-size:24px; text-align:center; color:black;">Thank you for shopping at The Shopping Dead!</p>
+                            <apex:outputText value="{!trans.Store__r.Name}"/>
+                            <apex:outputText value="{!trans.Name}"/>
+                            <apex:outputText value="{!trans.Date_Time__c}"/>
+                        </apex:pageBlockSection>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="table">
+                        <apex:pageBlockTable value="{!trans.Receipts__r}" var="tr">
+                            <apex:column style="text-align:left;" value="{!tr.Product__r.ProductCode}"/>
+                            <apex:column style="text-align:left;" value="{!tr.Product__r.Name}"/>
+                            <apex:column style="text-align:left;" value="{!tr.Product__r.Price__c}"/>
+                        </apex:pageBlockTable>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div style="text-align:center;" class="total">
+                        <apex:pageBlockSection columns="1">
+                            <apex:outputField value="{!trans.Sub_Total__c}"/>
+                            <apex:outputField value="{!trans.Tax__c}"/>
+                            <apex:outputField value="{!trans.Total__c}"/>
+                        </apex:pageBlockSection>
+                    </div>
+                    
+                    <br/>
+                </apex:pageBlock>
+            </div>
+        </apex:form>
+    
+</apex:page>
