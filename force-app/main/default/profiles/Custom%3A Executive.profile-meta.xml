@@ -105,13 +105,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SuplierOrder</apexClass>
+        <apexClass>SupplierOrder</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>Supplier</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+ 
     <classAccesses>
         <apexClass>SupplierOrder</apexClass>
         <enabled>false</enabled>
