@@ -35,4 +35,22 @@ ehthumbs.db
 $RECYCLE.BIN/
 
 # Local environment variables
+<<<<<<< HEAD
 .env
+=======
+<<<<<<< HEAD
+.env
+=======
+.env
+
+# Any random things we don't need in the repo
+.eslintignore
+.forceignore
+.prettierignore
+.prettierrc
+.swift-sfdc.json
+jest.config.js
+sfdx-project.json
+package.json
+>>>>>>> b07e1e45fd1729692ebc545a404b77d8bf9f40a7
+>>>>>>> 85e02b98b840ee94b3ad0c2e3ab3bfc959eda085
