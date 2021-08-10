@@ -36,6 +36,26 @@
 		<members>*</members>
 		<name>CustomObject</name>
 	</types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+		<members>*</members>
+		<name>CustomApplication</name>
+	</types>
+    <types>
+		<members>*</members>
+		<name>CustomPermission</name>
+	</types>        
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ContentAsset</name>
+    </types>
 	<types>
 		<members>*</members>
 		<name>Layout</name>
@@ -43,6 +63,10 @@
     <types>
         <members>*</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
     </types>
     <types>
         <members>*</members>
