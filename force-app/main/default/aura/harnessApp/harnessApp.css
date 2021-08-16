@@ -1,0 +1,51 @@
+.THIS {
+    background-image: url('https://2.bp.blogspot.com/-7XBSMkyAyt4/Wc4HoYQXwPI/AAAAAAAABB4/agQ9rNmWfOMX34SfuDIZqtARhiI_JaHFgCLcBGAs/s1600/ZOMBIE%2BINVASION%2BSECTION%2B2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.THIS h1 {
+    font-size: 100px;
+    font-family: 'Creepster';
+    text-align: center;
+    color: cyan;
+    filter: drop-shadow(0 0 0.75rem #74FFFF);
+}
+
+.THIS .supplierCmp {
+    font-size: 20px;
+    font-weight: strong;
+    border: 1px solid cyan;
+    box-sizing: border-box;
+    display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+    --sds-c-accordion-heading-font-size: 1.5rem;
+	--sds-c-accordion-heading-text-color-hover: #000000;
+    --sds-c-accordion-heading-text-color: cyan;
+    --sds-c-accordion-color-border: cyan;
+    --sds-c-accordion-summary-color-background: #ffffff;
+    --sds-c-button-brand-color-background: #515151;
+    --sds-c-button-brand-color-background-hover: #000000;
+    --sds-c-button-brand-color-border: #FFFFFF;
+    --sds-c-button-brand-color-border-hover: #000000;
+}
+
+.THIS .supplierOrderCmp {
+    font-size: 16px;
+    font-weight: strong;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+	display: flex;
+}
+
+@font-face {
+    font-family: 'Creepster';
+    src: url('/resource/Creepster') format('TrueType');
+}

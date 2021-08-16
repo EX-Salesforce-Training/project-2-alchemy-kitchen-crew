@@ -6,22 +6,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -45,32 +29,8 @@
 		<name>CustomApplication</name>
 	</types>
     <types>
-		<members>*</members>
-		<name>CustomPermission</name>
-	</types>        
-    <types>
-        <members>*</members>
-        <name>Profile</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ContentAsset</name>
-    </types>
-	<types>
-		<members>*</members>
-		<name>Layout</name>
-	</types>
-    <types>
         <members>*</members>
         <name>FlexiPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Flow</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>GlobalValueSet</name>
     </types>
     <version>52.0</version>
 </Package>

@@ -1,0 +1,31 @@
+<!--**************************************************************
+* SupplierCard.cmp
+* Author: Evan DeVizio
+* Created: 8/11/21
+* Modified: 8/16/21
+* Purpose: This is an Aura component for displaying Suppliers
+***************************************************************-->
+<aura:component controller="SupplierController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="supp" type="Supplier__c" />
+    
+    <div class="supplierCmp">
+    <lightning:card>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" padding="around-small">
+                <lightning:recordEditForm aura:id="supplierEditForm" objectApiName="Supplier__c" recordId="{!v.supp.Id}">
+                    <lightning:inputField fieldName="Name" />
+                    <lightning:inputField fieldName="Email__c" />
+                    <lightning:inputField fieldName="Phone__c" />
+                    <lightning:inputField fieldName="Street_Address__c" />
+                    <lightning:inputField fieldName="City__c" />
+                    <lightning:inputField fieldName="Zip__c" />
+                    <lightning:inputField fieldName="State__c" />
+                </lightning:recordEditForm>
+                <lightning:button variant="brand" label="Save" iconName="utility:edit" onclick="{!c.supplierSaveAction}" /> 
+                <lightning:button variant="brand" label="Visit Website" iconName="utility:world" onclick="{!c.visitWebsiteAction}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    </div>
+    
+</aura:component>
