@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="addPrice" type="Integer" />
+    <aura:attribute name="removePrice" type="Integer" />
+    <aura:attribute name="productId" type="Id" />
+
+</aura:event>

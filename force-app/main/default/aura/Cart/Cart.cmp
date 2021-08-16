@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="cart" type="Id[]" /> 
+    <aura:attribute name="total" type="Integer" default="0" />
+    
+    <aura:registerEvent name="checkoutCart" type="c:checkoutCart" />
+    
+    <aura:handler event="c:UpdateQuantity" action="{!c.updateTotal}" />
+	<aura:handler name="AddRemoveQuantity" event="c:AddRemoveQuantity" action="{!c.updateCart}" />    
+   
+   <h1 class="title" > Cart </h1>
+
+        
+       
+   <div class="cartContainer">
+        <div class="cartItem">
+                 <aura:iteration items="{!v.cart}" var="item">
+                     <c:CartItem item="{!item}" />
+                </aura:iteration>
+           
+        </div> 
+        
+        <div class="bottomInfo" >
+            	<h3> Total Before Tax : {!v.total} </h3>
+            	<lightning:button label="Checkout" onclick="{!c.checkout}" />
+               
+        </div>
+    </div>
+</aura:component>
