@@ -1,0 +1,9 @@
+.THIS .inventoryCmp{
+    font-size: 16px;
+    font-weight: strong;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+	display: flex;
+}

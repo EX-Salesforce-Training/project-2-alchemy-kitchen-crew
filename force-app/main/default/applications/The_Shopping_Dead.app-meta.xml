@@ -17,6 +17,7 @@
     <tabs>Supplier__c</tabs>
     <tabs>Transaction__c</tabs>
     <tabs>standard-Product2</tabs>
+    <tabs>Feedback__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>The_Shopping_Dead_UtilityBar</utilityBar>
 </CustomApplication>
