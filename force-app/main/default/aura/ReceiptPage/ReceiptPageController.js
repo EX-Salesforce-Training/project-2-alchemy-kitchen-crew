@@ -19,5 +19,16 @@
             }), 3000
     	);
         helper.retreiveCustomerInfo(component);
+    },
+    
+    displaySurvey : function(component,event,helper) {
+     console.log("clicked the button");
+	component.set("v.displaySurvey",true);
+    },
+    
+    displayProducts : function(component,event,helper) {
+        let action = component.getEvent("displayProductsPage");
+        action.fire();
     }
+    
 })

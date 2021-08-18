@@ -19,3 +19,53 @@
     font-family: 'creepyFont';
     src: url(/resource/creepyFont);
 }
+
+.THIS h1{
+    text-align: center;
+    font-size: 64px;
+    font-family: 'creepyFont';
+    filter: drop-shadow(0 0 0.75rem #6dd3d8);
+    color:cyan;
+}
+.THIS h2 {
+    text-align: center;
+    font-size: 64px;
+    font-family: 'creepyFont';
+    filter: drop-shadow(0 0 0.75rem #6dd3d8);
+    color: cyan;
+}
+.THIS .supplierCmp {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: cyan;    
+}
+
+.THIS .supplierOrderCmp {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: black;  
+}
+
+.THIS .feedbackForm {
+    width:auto;
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: black; 
+}

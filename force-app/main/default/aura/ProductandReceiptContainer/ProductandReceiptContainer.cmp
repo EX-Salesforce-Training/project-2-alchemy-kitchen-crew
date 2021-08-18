@@ -5,6 +5,7 @@
     <aura:attribute name="total" type="Id" />
     
     <aura:handler event="c:checkoutCart" action="{!c.displayReceipt}" />
+    <aura:handler name="displayProductsPage" event="c:displayProductsPage" action="{!c.displayProducts}" />
     
     <aura:if isTrue="{!v.showReceipt}">
         <c:ReceiptPage customer="{!v.customer}" total="{!v.total}" />
