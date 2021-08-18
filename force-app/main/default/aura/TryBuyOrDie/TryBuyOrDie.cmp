@@ -1,0 +1,39 @@
+<!--
+*TryBuyOrDie.cmp
+*By: Jawad Chowdhury
+*
+*New feature added to the Shopping Dead, where you can be able to test various
+*products on test zombie dummies to see how effective they are before you buy.
+*Features promotional items that the company is trying to sell.
+*
+-->
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+        
+    
+    
+    
+    <!-- Title -->    
+<div class="slds-grid slds-wrap">
+    	<div class="slds-col slds-size_1-of-3"></div>
+        <div class="slds-col slds-size_1-of-3 slds-text-align_center">
+           Customer Purchase Page
+        </div>
+        <div class="slds-col slds-size_1-of-3"></div>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</aura:component>
