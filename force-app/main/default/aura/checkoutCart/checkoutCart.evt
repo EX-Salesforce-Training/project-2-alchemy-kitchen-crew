@@ -1,1 +1,4 @@
-<aura:event type="APPLICATION" description="Event template" />
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="customer" type="Id" />
+    <aura:attribute name="total" type="Integer" />
+</aura:event>

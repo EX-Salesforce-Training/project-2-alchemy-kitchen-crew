@@ -25,10 +25,28 @@
             component.set("v.cart",cart);
         }
     },
+    openConfirm : function(component,event,helper) {
+        component.set("v.showConfirmDialog", true);
+    },
+    handleConfirmDialogNo : function(component,event,helper) {
+        component.set("v.showConfirmDialog", false);
+    },
     
     checkout : function(component,event,helper) {
-        console.log('checkout fired');
+        let cart = component.get("v.cart");
+       	let customerId = component.get("v.customerId");
+      	let storeId = component.get("v.storeId");
+        let total = component.get("v.total");
+        if(cart.length > 0){
+          helper.createTransaction(component, customerId,storeId);
+        }
+      	
         let checkoutCart = $A.get("e.c:checkoutCart");
+        checkoutCart.setParams({
+            "customer" : customerId,
+            "total" : total
+            
+        });
         checkoutCart.fire();
     }
 })

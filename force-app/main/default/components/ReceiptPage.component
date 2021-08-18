@@ -1,0 +1,7 @@
+<apex:component >
+    <div>
+        <h1>
+             This is the Receipts Page For Now, woohoo!
+        </h1>
+    </div>
+</apex:component>

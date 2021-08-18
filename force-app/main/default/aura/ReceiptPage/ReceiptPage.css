@@ -1,0 +1,25 @@
+.THIS {
+}
+
+.THIS .topBar{
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px black solid;
+}
+
+.THIS .total{
+ border-top: 2px black solid;  
+	
+}
+
+.THIS .receiptItems{
+    border: 2px black solid;
+    
+}
+
+.THIS .header{
+    font-family:'creepyFont';
+    font-size: 25px;
+    color: cyan;
+}

@@ -2,6 +2,8 @@
     <aura:attribute name="item" type="String" />
     <aura:attribute name="product" type="Product2" />
     <aura:attribute name="quantity" type="Integer" default="0" />
+	<aura:attribute name="customerId" type="Id" default="a005e0000066k4XAAQ" />
+                                                                           
     
     <aura:registerEvent name="AddRemoveQuantity" type="c:AddRemoveQuantity" />
     
@@ -15,9 +17,9 @@
 
         </div>
         <div>
-        	Price: : {!v.product.Price__c}
+        	Price: $ {!v.product.Price__c}
         </div>
-                  <div>
+       	<div class="quantitybuttons" >
            <lightning:button label="-" onclick="{!c.removeQuantity}" />
         	{!v.quantity}
             <lightning:button label="+" onclick="{!c.addToQuantity}" />

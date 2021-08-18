@@ -15,13 +15,9 @@
     <tabs>standard-home</tabs>
     <tabs>Receipt__c</tabs>
     <tabs>Supplier_Page</tabs>
-    <tabs>Feedback__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
-        <mappings>
-            <tab>Feedback__c</tab>
-        </mappings>
         <mappings>
             <tab>Receipt__c</tab>
         </mappings>
