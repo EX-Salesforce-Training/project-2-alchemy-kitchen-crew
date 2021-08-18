@@ -60,7 +60,13 @@
        action.fire();
     },
     
-    checkout : function(component,event,handler) {
+    checkout : function(component,event,helper) {
+
+      let customerId = component.get("v.customerId"); 
+      let quantity = component.get("v.quantity");
+      let productId = component.get("v.item");
+        
+      helper.createReceipts(component,quantity,productId,customerId)
       
     }
     

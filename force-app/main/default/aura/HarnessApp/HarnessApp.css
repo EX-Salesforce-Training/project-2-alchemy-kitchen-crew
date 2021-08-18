@@ -5,7 +5,6 @@
     	background-attachment: fixed;
      	filter: invert(100%);
     	-webkit-filter: invert(100%);
-    	color: cyan;
     	font-weight:bold;
     	overflow:auto;
 }
@@ -14,4 +13,9 @@
     background-image: url('https://www.everplans.com/sites/default/files/styles/article_header_image/public/scary-cemetery-zombies-fog-main.jpg?itok=blO7m2ZH');
     filter: invert(100%);
     	-webkit-filter: invert(100%);
+    height:100%;
+}
+@font-face {
+    font-family: 'creepyFont';
+    src: url(/resource/creepyFont);
 }
