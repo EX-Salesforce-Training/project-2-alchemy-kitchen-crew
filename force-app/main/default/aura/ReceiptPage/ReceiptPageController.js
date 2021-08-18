@@ -19,5 +19,20 @@
             }), 3000
     	);
         helper.retreiveCustomerInfo(component);
+<<<<<<< HEAD
     }
+=======
+    },
+    
+    displaySurvey : function(component,event,helper) {
+     console.log("clicked the button");
+	component.set("v.displaySurvey",true);
+    },
+    
+    displayProducts : function(component,event,helper) {
+        let action = component.getEvent("displayProductsPage");
+        action.fire();
+    }
+    
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
 })

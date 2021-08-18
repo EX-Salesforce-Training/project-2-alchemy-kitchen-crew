@@ -20,6 +20,10 @@
                             <lightning:outputField fieldName="Price__c" />
                         </div>
 					</lightning:recordViewForm>
+<<<<<<< HEAD
                     <lightning:button label="Add to Cart" onclick="{!c.addToCart}" />
+=======
+                    <lightning:button variant="brand" label="Add to Cart" onclick="{!c.addToCart}" />
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
             	</lightning:card>
 </aura:component>

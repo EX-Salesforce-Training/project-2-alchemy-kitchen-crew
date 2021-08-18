@@ -113,6 +113,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>ProductController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -123,6 +124,20 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+=======
+        <apexClass>Product2Controller</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <apexClass>ReceiptPageController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -135,7 +150,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
 >>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <apexClass>SupplierOrderTEST</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -150,7 +168,10 @@
     <custom>true</custom>
     <fieldPermissions>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <editable>true</editable>
         <field>Cart__c.Product_Price_Total__c</field>
         <readable>true</readable>
@@ -161,7 +182,10 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
 >>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <editable>false</editable>
         <field>Customer__c.City__c</field>
         <readable>false</readable>

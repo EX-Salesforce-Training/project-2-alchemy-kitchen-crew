@@ -5,6 +5,10 @@
 }
 .THIS .header{
     font-family:'creepyFont';
+<<<<<<< HEAD
     font-size: 25px;
+=======
+    font-size: 64px;
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
     color: cyan;
 }

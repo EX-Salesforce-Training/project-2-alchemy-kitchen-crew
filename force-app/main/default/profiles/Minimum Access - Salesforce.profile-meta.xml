@@ -102,12 +102,15 @@
     </applicationVisibilities>
     <classAccesses>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <apexClass>CPPController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CustomerPurchasePageController</apexClass>
 =======
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <apexClass>CustomerPurchasePageController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -129,7 +132,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>ReceiptPageControllerTest</apexClass>
+<<<<<<< HEAD
 >>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -151,7 +157,10 @@
     <custom>false</custom>
     <fieldPermissions>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <editable>true</editable>
         <field>Cart__c.Product_Price_Total__c</field>
         <readable>true</readable>
@@ -162,7 +171,10 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
 >>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+=======
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <editable>false</editable>
         <field>Customer__c.City__c</field>
         <readable>false</readable>
@@ -582,11 +594,17 @@
     </layoutAssignments>
     <layoutAssignments>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <layout>Cart__c-Cart Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
 >>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+=======
+        <layout>Cart__c-Cart Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         <layout>CaseMilestone-Case Milestone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>

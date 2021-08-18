@@ -3,11 +3,22 @@
     	<lightning:tab label="Products">
             <c:ProductandReceiptContainer />
         </lightning:tab>
+<<<<<<< HEAD
 		<lightning:tab label="Other Page">
         	<h1> Other page goes here</h1>
         </lightning:tab>
         <lightning:tab label="Other Page">
         	<h1> Final Page goes here</h1>
+=======
+		<lightning:tab label="Supplier Page">
+            <c:SupplierComponent />
+        </lightning:tab>
+        <lightning:tab label="Customer Page">
+            <c:CustomerPurchasePage />
+        </lightning:tab>
+        <lightning:tab label="Try Buy Or Die">
+            <c:TryBuyOrDie />
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
         </lightning:tab>
     </lightning:tabset>
 </aura:component>

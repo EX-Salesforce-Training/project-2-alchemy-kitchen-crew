@@ -20,6 +20,15 @@
 
 .THIS .header{
     font-family:'creepyFont';
+<<<<<<< HEAD
     font-size: 25px;
     color: cyan;
+=======
+    font-size: 64px;
+    color: cyan;
+}
+
+.THIS .survey{
+    height: 700px;
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
 }

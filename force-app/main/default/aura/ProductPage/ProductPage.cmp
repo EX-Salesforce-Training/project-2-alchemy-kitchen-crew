@@ -18,10 +18,17 @@
         </div>
       
         <div class="slds-col slds-size_3-of-12">
+<<<<<<< HEAD
             <c:Cart cart="{!v.cartItems}" />
         </div>
     </div>
     <div>
     	<h1>hello</h1>
     </div>
+=======
+            	<h1 class="header"> Cart</h1>
+            <c:Cart cart="{!v.cartItems}" />
+        </div>
+    </div>
+>>>>>>> 67bae5c27ad2bab31f5dfe90111cac1c84e49cf3
 </aura:component>
