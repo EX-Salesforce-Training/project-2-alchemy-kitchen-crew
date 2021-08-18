@@ -1,5 +1,3 @@
 <aura:application extends="force:slds">
-    <div>
-        <c:Feedback />
-    </div>
+    <c:tabsPage />
 </aura:application>

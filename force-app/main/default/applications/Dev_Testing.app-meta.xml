@@ -24,7 +24,6 @@
     <tabs>Customer_Page</tabs>
     <tabs>Receipt__c</tabs>
     <tabs>Supplier_Page</tabs>
-    <tabs>Feedback__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Dev_Testing_UtilityBar</utilityBar>
 </CustomApplication>
