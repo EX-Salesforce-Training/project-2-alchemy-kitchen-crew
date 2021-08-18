@@ -105,7 +105,43 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>CustomerPurchasePageController</apexClass>
+=======
+        <apexClass>Product2Controller</apexClass>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+<<<<<<< HEAD
+        <apexClass>SupplierOrderTEST</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TransactionController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TransactionControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <custom>false</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+=======
+        <apexClass>ProductControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -127,6 +163,17 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Cart__c.Product_Price_Total__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cart__c.Product_Total__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <field>Customer__c.City__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -554,6 +601,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Cart__c-Cart Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>

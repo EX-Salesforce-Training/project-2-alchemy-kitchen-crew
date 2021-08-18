@@ -3,7 +3,7 @@
 *By: Jawad Chowdhury
 *
 *Remake of the Original Visualforce Page which Display Customer Information 
-*on the page and searches for the customer information if search is clicked.
+*on the page and searches for the customer information if entered.
 *The Save button will update or insert the Customer record into the database.
 *
 -->

@@ -1,0 +1,27 @@
+<aura:component controller="ProductController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+   	<aura:attribute name="products" type="ID[]" />
+    <aura:attribute name="cartItems" type="ID[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getProducts}" />
+    <aura:handler name="addToCartEvent" event="c:addToCartEvent" action="{!c.updateCart}" />
+    
+    <div class="slds-grid slds-wrap"> 
+    	<div class="slds-col slds-size_9-of-12">
+                <h1 class="header"> Available Products</h1>
+ 			<lightning:layout multipleRows="true"> 
+                <aura:iteration items="{!v.products}" var="productId">
+                    <lightning:layoutItem size="4" padding="around-small">
+                   		 <c:ProductItem id="{!productId}" cart="{!v.cartItems}" />
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+        </div>
+      
+        <div class="slds-col slds-size_3-of-12">
+            <c:Cart cart="{!v.cartItems}" />
+        </div>
+    </div>
+    <div>
+    	<h1>hello</h1>
+    </div>
+</aura:component>

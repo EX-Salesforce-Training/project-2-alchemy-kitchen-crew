@@ -101,11 +101,35 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>CPPController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CustomerPurchasePageController</apexClass>
+=======
+        <apexClass>CustomerPurchasePageController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Product2Controller</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageControllerTest</apexClass>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -126,6 +150,19 @@
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>true</editable>
+        <field>Cart__c.Product_Price_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Cart__c.Product_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <editable>false</editable>
         <field>Customer__c.City__c</field>
         <readable>false</readable>
@@ -544,6 +581,12 @@
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
+=======
+        <layout>Cart__c-Cart Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <layout>CaseMilestone-Case Milestone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>

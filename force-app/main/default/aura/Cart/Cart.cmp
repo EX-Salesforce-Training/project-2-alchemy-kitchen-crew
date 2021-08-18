@@ -1,0 +1,58 @@
+<aura:component controller="ProductController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="cart" type="Id[]" /> 
+    <aura:attribute name="total" type="Integer" default="0" />
+    <aura:attribute name="customerId" type="Id" default="a005e0000066k4XAAQ" />
+    <aura:attribute name="storeId" type="Id" default="a055e000002AYiEAAW" />
+    <aura:attribute name="transactionId" type="Id" />
+    <aura:attribute name="showConfirmDialog" type="boolean" />
+
+    
+    <aura:registerEvent name="checkoutCart" type="c:checkoutCart" />
+    
+    <aura:handler event="c:UpdateQuantity" action="{!c.updateTotal}" />
+	<aura:handler name="AddRemoveQuantity" event="c:AddRemoveQuantity" action="{!c.updateCart}" />    
+   <br></br>
+   <h1 class="header" > Cart </h1>
+	<br></br>
+  
+   <div class="cartContainer">
+        <div class="cartItem">
+                 <aura:iteration items="{!v.cart}" var="item">
+                     <c:CartItem item="{!item}" />
+                </aura:iteration>
+           
+        </div> 
+        
+        <div class="bottomInfo" >
+            	<h3> Total : ${!v.total} </h3>
+            	<lightning:button label="Checkout" onclick="{!c.openConfirm}" />
+                
+            <aura:if isTrue="{!v.showConfirmDialog}">
+            	<!--Modal Box Start-->
+                <div role="dialog" class="slds-modal slds-fade-in-open ">
+                    <div class="slds-modal__container">
+                        <!--Modal Box Header Start-->
+                        <header class="slds-modal__header">
+                            <h1 class="slds-text-heading--medium" style="font-family:creepyFont; color: cyan;" >Confirmation</h1>
+                        </header>
+                        <!--Modal Box Header End-->
+                         
+                        <!--Modal Box Content Start-->
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <center><b>Are you sure you want to checkout?</b></center>
+                        </div>
+                        <!--Modal Box Content End-->
+                         
+                        <!--Modal Box Button Start-->
+                        <footer class="slds-modal__footer">
+                            <lightning:button name='No' label='No' onclick='{!c.handleConfirmDialogNo}'/>
+                            <lightning:button variant="brand" name='Yes' label='Yes' onclick='{!c.checkout}'/>
+                        </footer>
+                        <!--Modal Box Button End-->
+                    </div>
+                </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>            
+        </aura:if>
+        </div>
+    </div>
+</aura:component>

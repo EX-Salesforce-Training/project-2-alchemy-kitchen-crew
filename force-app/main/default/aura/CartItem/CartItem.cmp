@@ -1,0 +1,30 @@
+<aura:component controller="ProductController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="item" type="String" />
+    <aura:attribute name="product" type="Product2" />
+    <aura:attribute name="quantity" type="Integer" default="0" />
+	<aura:attribute name="customerId" type="Id" default="a005e0000066k4XAAQ" />
+                                                                           
+    
+    <aura:registerEvent name="AddRemoveQuantity" type="c:AddRemoveQuantity" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getItem}" />
+    <aura:handler event="c:UpdateQuantity" action="{!c.updateQuantity}" />
+    <aura:handler event="c:checkoutCart" action="{!c.checkout}" />
+    
+    <div class="itemContainer">
+        <div>
+        	Item Name : {!v.product.Name}  
+
+        </div>
+        <div>
+        	Price: $ {!v.product.Price__c}
+        </div>
+       	<div class="quantitybuttons" >
+           <lightning:button label="-" onclick="{!c.removeQuantity}" />
+        	{!v.quantity}
+            <lightning:button label="+" onclick="{!c.addToQuantity}" />
+            
+        </div>
+    	 
+    </div>
+</aura:component>

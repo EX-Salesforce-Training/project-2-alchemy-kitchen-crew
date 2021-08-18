@@ -1,0 +1,25 @@
+<!--**************************************************************
+* SupplierOrderComponent.cmp
+* Author: Evan DeVizio
+* Created: 8/11/21
+* Modified: 8/16/21
+* Purpose: This is an Aura component for displaying Supplier Orders
+****************************************************************-->
+
+<aura:component controller="SupplierController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="suppOrder" type="Supplier_Order__c" />
+    
+    <lightning:card>
+        <lightning:recordEditForm aura:id="supplierOrderEditForm" 
+                                  recordId="{!v.suppOrder.Id}" 
+                                  objectApiName="Supplier_Order__c">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="Store__c" />
+            <lightning:inputField fieldName="Cost__c" />
+        </lightning:recordEditForm>
+        <lightning:button variant="brand" label="Save" iconName="utility:edit" onclick="{!c.supplierOrderSaveAction}" /> 
+    </lightning:card>
+
+
+</aura:component>

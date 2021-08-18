@@ -105,7 +105,29 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>CustomerPurchasePageController</apexClass>
+=======
+        <apexClass>Product2Controller</apexClass>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+<<<<<<< HEAD
+=======
+        <apexClass>ProductControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -113,6 +135,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <apexClass>SupplierOrderTEST</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -126,6 +149,19 @@
     </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
+<<<<<<< HEAD
+=======
+        <editable>true</editable>
+        <field>Cart__c.Product_Price_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Cart__c.Product_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <editable>false</editable>
         <field>Customer__c.City__c</field>
         <readable>false</readable>
@@ -554,6 +590,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Cart__c-Cart Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case %28Sales%29 Layout</layout>

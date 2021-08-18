@@ -1,0 +1,32 @@
+<!--*********************************************************
+* InventoryComponent.cmp
+* Author: Evan DeVizio
+* Created: 8/16/21
+* Modified: 8/16/21
+* Purpose: Dynamically display Products based on store in a 
+		   single component and allow users to edit records.
+************************************************************-->
+<aura:component controller="InventoryController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="Stores" type="Store__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.initStores}"/>
+    
+    <h1>Inventory</h1>
+	
+    <lightning:layout>
+        <lightning:layoutItem size="12" padding="around-small">
+            <div class="inventoryCmp">
+                <lightning:card variant="Narrow" title="Stores" iconName="custom:custom107">
+                    <lightning:tabset variant="scoped">
+                        <aura:iteration items="{!v.Stores}" var="store">
+                            <lightning:tab label="{!store.Name}">
+                                <!-- Product info -->
+                                <!-- instantiate product cmp (arg: store.id) -->
+                            </lightning:tab> 
+                        </aura:iteration>                    
+                    </lightning:tabset>
+                </lightning:card>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+</aura:component>

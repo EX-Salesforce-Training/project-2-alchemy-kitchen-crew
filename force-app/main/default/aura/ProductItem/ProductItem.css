@@ -1,0 +1,9 @@
+.THIS {
+}
+
+.THIS.productCard {
+    border-width: 2px;
+    border-color:black;
+    border-radius: 5px;
+    color: cyan;
+}

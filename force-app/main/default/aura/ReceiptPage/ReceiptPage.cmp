@@ -1,0 +1,57 @@
+<aura:component
+  controller="ReceiptPageController"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+  access="global"
+>
+  <aura:attribute name="loaded" type="Boolean" />
+  <aura:attribute name="customer" type="String" />
+  <aura:attribute name="productIds" type="String[]" />
+  <aura:attribute name="customerName" type="String" />
+  <aura:attribute name="creditCard" type="String" />
+  <aura:attribute name="street" type="String" />
+  <aura:attribute name="city" type="String" />
+  <aura:attribute name="state" type="String" />
+  <aura:attribute name="zip" type="String" />
+  <aura:attribute name="total" type="Integer" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.retreiveInfo}" />
+ <div class="pageContainer">
+  	<aura:if isTrue="{!v.loaded}">
+    
+          		<div class="slds-page-header"> 
+                    <h1 class="header"> Your Order is Confirmed {!v.customerName}! </h1>
+      			</div>
+   
+               <div class="topBar">
+                    <div> Order Date <br></br>Today's Date </div>
+                    <div> Payment Method <br></br>{!v.creditCard} </div>
+                    <div>
+                      Shipping Address: <br></br> {!v.street}, {!v.city}, {!v.state},{!v.zip}
+                    </div>
+              </div>
+          <div class="receiptItems">
+              <h1> Items </h1>
+              <aura:iteration items="{!v.productIds}" var="product">
+                  	<c:Receipt product="{!product}" /> 
+        	  </aura:iteration> 
+              
+              <div class="slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-3" ></div>
+                    <div class="slds-col slds-size_1-of-3"> </div>
+                  <div class="slds-col slds-size_1_of-3" style="border-top: 2px black solid;"> Total ${!v.total} </div>
+              </div>
+              
+      		</div>
+     
+   
+      
+            <aura:set attribute="else"> 
+                <div class="exampleHolder">
+                    <h1 class="header">Your Order is Processing</h1>
+        			<lightning:spinner alternativeText="Loading" size="large" />
+   				 </div>
+            </aura:set>
+  	</aura:if> 
+    
+ </div>
+</aura:component>

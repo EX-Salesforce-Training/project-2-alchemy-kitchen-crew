@@ -1,0 +1,15 @@
+<aura:component controller="ProductController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 
+    <aura:attribute name="showReceipt" type="Boolean" default="false"/>
+    <aura:attribute name="customer" type="Id"/>
+    <aura:attribute name="total" type="Id" />
+    
+    <aura:handler event="c:checkoutCart" action="{!c.displayReceipt}" />
+    
+    <aura:if isTrue="{!v.showReceipt}">
+        <c:ReceiptPage customer="{!v.customer}" total="{!v.total}" />
+    <aura:set attribute="else">
+        <c:ProductPage />
+    </aura:set>
+  </aura:if>
+</aura:component>

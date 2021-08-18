@@ -109,7 +109,35 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SupplierOrder</apexClass>
+        <apexClass>Product2Controller</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReceiptPageControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SupplierOrderTEST</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TransactionController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TransactionControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -127,6 +155,19 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
+=======
+        <field>Cart__c.Product_Price_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Cart__c.Product_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <field>Customer__c.City__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -298,7 +339,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Description__c</field>
+<<<<<<< HEAD
         <readable>false</readable>
+=======
+        <readable>true</readable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -323,17 +368,30 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Health_Restored__c</field>
+<<<<<<< HEAD
         <readable>false</readable>
+=======
+        <readable>true</readable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Inventory__c</field>
+<<<<<<< HEAD
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Price__c</field>
         <readable>false</readable>
+=======
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Price__c</field>
+        <readable>true</readable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -351,6 +409,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Product2.Store__c</field>
         <readable>false</readable>
@@ -374,6 +433,31 @@
         <editable>false</editable>
         <field>Receipt__c.Transaction__c</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Product2.Store__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Transaction__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Weight__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Receipt__c.Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Receipt__c.Transaction__c</field>
+        <readable>true</readable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -491,6 +575,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>false</editable>
         <field>Transaction__c.Date_Time__c</field>
         <readable>false</readable>
@@ -509,6 +594,26 @@
         <editable>false</editable>
         <field>Transaction__c.Total__c</field>
         <readable>false</readable>
+=======
+        <editable>true</editable>
+        <field>Transaction__c.Date_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Transaction__c.Sub_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Transaction__c.Tax__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Transaction__c.Total__c</field>
+        <readable>true</readable>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
     </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
@@ -554,6 +659,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Cart__c-Cart Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
@@ -796,7 +904,14 @@
         <recordType>Supplier_Order__c.choose</recordType>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Supplier__c-Supplier Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+=======
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
+        <layout>Supplier__c-Supplier Layout</layout>
+        <recordType>Supplier__c.Pick_Supplier</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Supplier__c-Supplier Layout</layout>
@@ -880,6 +995,18 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+<<<<<<< HEAD
+=======
+        <object>Cart__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+>>>>>>> 4b09277c63655fa59b5ce32dc3df83b08c30233c
         <object>Customer__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>

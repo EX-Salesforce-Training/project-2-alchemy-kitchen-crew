@@ -1,0 +1,83 @@
+<!--************************************************************
+* Feedback.cmp
+* Author: Evan DeVizio
+* Created: 8/16/21
+* Modified: 8/16/21
+* Purpose: Display a customer feedback form.
+**************************************************************-->
+<aura:component controller="FeedbackControllerC" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="Feedback" type="Feedback__c" />
+    <aura:attribute name="modalSwitch" type="Boolean" default="false"/>
+
+    <div>
+        <h2>Thank you for using<br />
+        	The Shopping Dead!</h2>
+    </div>
+    
+    <div class="feedbackForm">
+    <lightning:layout multipleRows="true">
+    <lightning:layoutItem size="12" padding="around-small">
+
+            <lightning:card>
+                <lightning:recordEditForm aura:id="FeedbackForm" recordId="{!v.Feedback}" objectApiName="Feedback__c">
+                <lightning:messages />
+                <h3>How did you hear about us?</h3>
+                	<lightning:inputField fieldName="Feedback_Q1__c" variant="label-hidden"/>
+                <h3>On a scale of 1-5, how would you rate your over experience on The Shopping Dead?</h3>
+                    <lightning:inputField fieldName="Feedback_Q2__c"  variant="label-hidden"/>
+                <h3>On a scale of 1-5, how satisfied were you with the selection of items available for purchase?</h3>
+                    <lightning:inputField fieldName="Feedback_Q3__c"  variant="label-hidden"/>
+                <h3>On a scale of 1-5, how likely are you to refer a friend to The Shopping Dead? </h3>
+                    <lightning:inputField fieldName="Feedback_Q4__c"  variant="label-hidden"/>
+                <h3>Do you have any suggestions for us to improve our software?</h3>
+                    <lightning:inputField fieldName="Feedback_Q5__c"  variant="label-hidden"/>
+                </lightning:recordEditForm>
+                
+                <lightning:button type="submit" name="submit" label="Submit" variant="brand" 
+                                  iconName="utility:upload" iconPosition="left" onclick="{!c.saveFeedback}"/> 
+                
+            </lightning:card>   
+
+        </lightning:layoutItem>
+        </lightning:layout>    
+        </div>
+    
+    <div class="slds-m-around_xx-large">
+        
+        <!--Use aura:if tag to display Model Box depending on modalSwitch attribute. -->   
+        <aura:if isTrue="{!v.modalSwitch}">
+            
+            <!--###### MODAL BOX Start ######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">The Shopping Dead</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p><b>Thank you for your taking the time to complete this survey. <br/>
+                            Your feedback is greatly appreciated!</b>
+                        </p>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" 
+                                          label="Close"
+                                          title="Close"
+                                          onclick="{! c.closeModel }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+    </div>
+
+</aura:component>

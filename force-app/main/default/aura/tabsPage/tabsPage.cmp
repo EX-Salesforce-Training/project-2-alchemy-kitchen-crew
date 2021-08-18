@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:tabset variant="vertical" >
+    	<lightning:tab label="Products">
+            <c:ProductandReceiptContainer />
+        </lightning:tab>
+		<lightning:tab label="Other Page">
+        	<h1> Other page goes here</h1>
+        </lightning:tab>
+        <lightning:tab label="Other Page">
+        	<h1> Final Page goes here</h1>
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

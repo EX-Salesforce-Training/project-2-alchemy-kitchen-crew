@@ -1,0 +1,10 @@
+.THIS {
+}
+.THIS .itemContainer {
+	border: 3px solid black !important;
+    display: flex;
+}
+
+.THIS .quantitybuttons {
+    
+}
