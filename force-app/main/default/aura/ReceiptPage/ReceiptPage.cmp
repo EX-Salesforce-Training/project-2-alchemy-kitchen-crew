@@ -3,6 +3,8 @@
   implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
   access="global"
 >
+  <aura:registerEvent name="displayProductsPage" type="c:displayProductsPage" />
+    
   <aura:attribute name="loaded" type="Boolean" />
   <aura:attribute name="customer" type="String" />
   <aura:attribute name="productIds" type="String[]" />
@@ -13,8 +15,11 @@
   <aura:attribute name="state" type="String" />
   <aura:attribute name="zip" type="String" />
   <aura:attribute name="total" type="Integer" />
+  <aura:attribute name="displaySurvey" type="Boolean" />
 
   <aura:handler name="init" value="{!this}" action="{!c.retreiveInfo}" />
+    
+  
  <div class="pageContainer">
   	<aura:if isTrue="{!v.loaded}">
     
@@ -23,14 +28,14 @@
       			</div>
    
                <div class="topBar">
-                    <div> Order Date <br></br>Today's Date </div>
+                   <div> Order Date <br></br>8/17/21 </div>
                     <div> Payment Method <br></br>{!v.creditCard} </div>
                     <div>
                       Shipping Address: <br></br> {!v.street}, {!v.city}, {!v.state},{!v.zip}
                     </div>
               </div>
           <div class="receiptItems">
-              <h1> Items </h1>
+              <h2 style="font-size:25px; border-bottom: 2px black solid"> Items </h2>
               <aura:iteration items="{!v.productIds}" var="product">
                   	<c:Receipt product="{!product}" /> 
         	  </aura:iteration> 
@@ -42,6 +47,15 @@
               </div>
               
       		</div>
+        
+        	<div class="survey">
+                <h3 style="font-size:25px;" > Would you like to take a quick survey?<lightning:button label="Yes" onclick="{!c.displaySurvey}" /><lightning:button label="Display Products Again" onclick="{!c.displayProducts}" /></h3>
+                
+                <aura:if isTrue="{!v.displaySurvey}">
+                	<c:Feedback />
+                </aura:if>
+                
+        	</div>
      
    
       

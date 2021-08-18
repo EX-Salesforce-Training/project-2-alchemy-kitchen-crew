@@ -20,9 +20,6 @@
                     <div class="slds-col slds-size_1-of-3" >loading</div>
                   <div class="slds-col slds-size_1-of-3" >loading</div>
               </div>
-         <div class="exampleHolder">
-       		 <lightning:spinner alternativeText="Loading" size="large" />
-   		 </div>
         </aura:set>
     </aura:if>
     

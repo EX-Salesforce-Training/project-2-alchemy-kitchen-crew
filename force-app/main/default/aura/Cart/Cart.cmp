@@ -11,10 +11,7 @@
     
     <aura:handler event="c:UpdateQuantity" action="{!c.updateTotal}" />
 	<aura:handler name="AddRemoveQuantity" event="c:AddRemoveQuantity" action="{!c.updateCart}" />    
-   <br></br>
-   <h1 class="header" > Cart </h1>
-	<br></br>
-  
+  <br></br>
    <div class="cartContainer">
         <div class="cartItem">
                  <aura:iteration items="{!v.cart}" var="item">
@@ -25,7 +22,7 @@
         
         <div class="bottomInfo" >
             	<h3> Total : ${!v.total} </h3>
-            	<lightning:button label="Checkout" onclick="{!c.openConfirm}" />
+            	<lightning:button variant="brand" label="Checkout" onclick="{!c.openConfirm}" />
                 
             <aura:if isTrue="{!v.showConfirmDialog}">
             	<!--Modal Box Start-->

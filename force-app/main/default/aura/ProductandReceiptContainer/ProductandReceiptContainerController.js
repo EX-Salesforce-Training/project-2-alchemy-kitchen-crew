@@ -5,5 +5,8 @@
         component.set("v.customer",customer);
         component.set("v.total",total);
 		component.set("v.showReceipt", true);
-	}
+	},
+    displayProducts : function(component,event,helper) {
+        component.set("v.showReceipt",false);
+    }
 })
