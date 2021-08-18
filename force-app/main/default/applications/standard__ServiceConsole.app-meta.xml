@@ -181,7 +181,11 @@
     <tabs>standard-Lead</tabs>
     <tabs>Receipt__c</tabs>
     <tabs>Supplier_Page</tabs>
+    <tabs>Feedback__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Feedback__c</tab>
+        </mappings>
         <mappings>
             <tab>Receipt__c</tab>
         </mappings>

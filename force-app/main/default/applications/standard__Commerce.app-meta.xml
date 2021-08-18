@@ -13,8 +13,12 @@
     <tabs>standard-Order</tabs>
     <tabs>Receipt__c</tabs>
     <tabs>Supplier_Page</tabs>
+    <tabs>Feedback__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>Feedback__c</tab>
+        </mappings>
         <mappings>
             <tab>Receipt__c</tab>
         </mappings>
