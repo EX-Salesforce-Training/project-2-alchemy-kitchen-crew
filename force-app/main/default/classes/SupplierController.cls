@@ -23,6 +23,12 @@ public with sharing class SupplierController {
     }
     
     @AuraEnabled
+    public static void saveAcc(String name, String phone) {
+       Account acc = new Account(Name=name, Phone=phone);
+        
+    }
+    
+    @AuraEnabled
     public static List<Supplier_Order__c> getSupplierOrders() {
         List<Supplier_Order__c> suppOrderList = new List<Supplier_Order__c>();
         if(Schema.SObjectType.Supplier_Order__c.isAccessible()) {

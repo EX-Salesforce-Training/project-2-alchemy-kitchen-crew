@@ -5,7 +5,7 @@
 * Modified: 8/16/21
 * Purpose: Display a customer feedback form.
 **************************************************************-->
-<aura:component controller="FeedbackControllerApex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+<aura:component controller="FeedbackControllerC" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
     <aura:attribute name="Feedback" type="Feedback__c" />
     <aura:attribute name="modalSwitch" type="Boolean" default="false"/>
 

@@ -1,0 +1,76 @@
+.THIS {
+    background-image: url('https://2.bp.blogspot.com/-7XBSMkyAyt4/Wc4HoYQXwPI/AAAAAAAABB4/agQ9rNmWfOMX34SfuDIZqtARhiI_JaHFgCLcBGAs/s1600/ZOMBIE%2BINVASION%2BSECTION%2B2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-attachment: fixed;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    color: black;
+    font-weight:bold;
+    overflow:auto;
+    --sds-c-accordion-heading-font-size: 1.5rem;
+    --sds-c-accordion-heading-text-color: black;
+    --sds-c-accordion-heading-text-color-hover: cyan;
+}
+
+.THIS h1{
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Creepster';
+    filter: drop-shadow(0 0 0.75rem #6dd3d8);
+    color:cyan;
+}
+.THIS h2 {
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Creepster';
+    filter: drop-shadow(0 0 0.75rem #6dd3d8);
+    color: cyan;
+}
+
+@font-face {
+    font-family: 'Creepster';
+    src: url('/resource/Creepster') format('TrueType');
+}
+
+.THIS body {
+    background-image: url('https://www.everplans.com/sites/default/files/styles/article_header_image/public/scary-cemetery-zombies-fog-main.jpg?itok=blO7m2ZH');
+    filter: invert(100%);
+    	-webkit-filter: invert(100%);
+}
+
+.THIS .supplierCmp {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: cyan;    
+}
+
+.THIS .supplierOrderCmp {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: cyan;  
+}
+
+.THIS .feedbackForm {
+    width:auto;
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    border-style: outset;
+    border-width: medium;
+    border-color: cyan; 
+}

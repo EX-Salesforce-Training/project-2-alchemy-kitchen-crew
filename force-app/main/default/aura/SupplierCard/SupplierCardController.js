@@ -2,13 +2,14 @@
 * SupplierCardController.js
 * Author: Evan DeVizio
 * Created: 8/11/21
-* Modified: 8/15/21
+* Modified: 8/17/21
 * Purpose: Client-side controller for the SupplierCard component.
 ******************************************************************/
 
-({
-    supplierSaveAction : function(cmp, evt, hlpr) {
+({    
+    supplierSaveAction2 : function(cmp, evt, hlpr) {
         cmp.find("supplierEditForm").submit();
+        accSaveAction();
     },
     
     visitWebsiteAction : function(cmp, evt, hlpr) {
