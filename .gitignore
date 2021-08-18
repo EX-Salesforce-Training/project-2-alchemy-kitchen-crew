@@ -35,6 +35,7 @@ ehthumbs.db
 $RECYCLE.BIN/
 
 # Local environment variables
+<<<<<<< HEAD
 .env
 
 # Any random things we don't need in the repo

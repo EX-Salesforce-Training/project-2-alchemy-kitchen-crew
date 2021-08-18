@@ -1,0 +1,25 @@
+<aura:component controller="ProductController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:registerEvent name="addToCartEvent" type="c:addToCartEvent" />
+    <aura:registerEvent name="UpdateQuantity" type="c:UpdateQuantity" />
+    
+    <aura:attribute name="id" type="ID" />
+    <aura:attribute name="cart" type="Id[]" />
+    <aura:attribute name="product" type="Product2" />
+    <aura:attribute name="productName" type="String" />
+    <aura:attribute name="productCode" type="String" />
+    <aura:attribute name="price" type="Double" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.retrieveProduct}" />
+   
+   
+                <lightning:card class="productCard" variant="Narrow" title="Product" iconName="standard:account" >
+               		<lightning:recordViewForm recordId="{!v.id}" objectApiName="Product2">
+                    	<div >
+                            <lightning:outputField fieldName="Name" />
+                            <lightning:outputField fieldName="ProductCode" />
+                            <lightning:outputField fieldName="Price__c" />
+                        </div>
+					</lightning:recordViewForm>
+                    <lightning:button label="Add to Cart" onclick="{!c.addToCart}" />
+            	</lightning:card>
+</aura:component>

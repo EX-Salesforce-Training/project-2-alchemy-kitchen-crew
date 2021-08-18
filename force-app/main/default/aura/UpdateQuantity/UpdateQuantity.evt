@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="productToUpdate" type="String" />
+    <aura:attribute name="productPrice" type="Integer" />
+</aura:event>

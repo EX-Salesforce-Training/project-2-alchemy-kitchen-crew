@@ -1,0 +1,39 @@
+<!--************************************************************
+* SupplierComponent.cmp
+* Author: Evan DeVizio
+* Created: 8/10/21
+* Modified: 8/16/21
+* Purpose: Dynamically display Supplier and Supplier Orders 
+		   in a single component and allow users to edit records.
+**************************************************************-->
+
+<aura:component controller="SupplierController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="supplierObjs" type="Supplier__c[]" />
+    <aura:attribute name="suppOrders" type="Supplier_Order__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.supplierObjsAction}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.supplierOrderAction}" />
+    
+    <h1>SUPPLIERS</h1>
+    
+    <div class="supplierCmp">
+        <lightning:accordion aura:id="accordion">
+            <aura:iteration items="{!v.supplierObjs}" var="supplierObj">
+                <lightning:accordionSection label="{!supplierObj.Name}">
+                    <c:SupplierCard supp="{!supplierObj}" />
+                </lightning:accordionSection>   
+            </aura:iteration>
+        </lightning:accordion>
+    </div>
+    
+    <div class="supplierOrderCmp">
+        <div class="slds-grid slds-grid_vertical-align-center">
+            <div class="slds-col">
+                <h1>SUPPLIER ORDERS</h1>
+                <aura:iteration items="{!v.suppOrders}" var="suppOrder">
+                    <c:SupplierOrderComponent suppOrder="{!suppOrder}" />
+                </aura:iteration>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

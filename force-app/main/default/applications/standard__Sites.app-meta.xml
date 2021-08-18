@@ -8,4 +8,5 @@
     <tabs>standard-Sites</tabs>
     <tabs>Receipt__c</tabs>
     <tabs>Supplier_Page</tabs>
+    <tabs>Feedback__c</tabs>
 </CustomApplication>
