@@ -20,10 +20,12 @@
   <aura:handler name="init" value="{!this}" action="{!c.retreiveInfo}" />
     
   
- <div class="pageContainer">
-  	<aura:if isTrue="{!v.loaded}">
+ <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_2-of-12" ></div>
+     <div  style="background: white; opacity:93%;" class="slds-col slds-size_8-of-12" >
+     	<aura:if isTrue="{!v.loaded}">
     
-          		<div class="slds-page-header"> 
+          		<div> 
                     <h1 class="header"> Your Order is Confirmed {!v.customerName}! </h1>
       			</div>
    
@@ -66,6 +68,7 @@
    				 </div>
             </aura:set>
   	</aura:if> 
-    
+     </div>
+     <div class="slds-col slds-size_2-of-12" ></div>
  </div>
 </aura:component>

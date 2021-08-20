@@ -9,7 +9,9 @@
         newReceipts.setCallback(this,function(response){
             if(response.getState()==="SUCCESS") {
                 console.log("new receipts",response.getReturnValue());
-			}
+            } else {
+                console.log("receipts failed to be made", response.getState());
+            }
         })
         $A.enqueueAction(newReceipts);
     }

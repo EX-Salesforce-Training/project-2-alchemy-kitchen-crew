@@ -1,0 +1,14 @@
+<aura:component >
+    
+
+    <aura:attribute name="customerId" type="String" />
+    
+	<lightning:tabset  >     
+        <lightning:tab label="Products">
+            <c:ProductandReceiptContainer customer="{!v.customerId}" />
+        </lightning:tab>
+        <lightning:tab label="Try Buy Or Die">
+            <c:TryBuyOrDie />
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

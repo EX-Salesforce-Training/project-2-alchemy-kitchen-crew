@@ -1,0 +1,36 @@
+<aura:component >
+     <aura:attribute name="customer" type="Boolean" />
+    <aura:attribute name="signedIn" type="Boolean" default="false" /> 
+    <aura:attribute name="userId" type="Id" />
+    <aura:attribute name="userName" type="String" />
+    
+    
+    <aura:handler event="c:SignIn" action="{!c.signIn}" />
+    
+  
+    
+	
+    
+    
+   
+    <h1 class="header" > The Shopping Dead</h1>
+    <aura:if isTrue="{!v.signedIn}" >
+        <div class="userInfo">
+         	<h1 class="userWelcome"> Welcome {!v.userName} </h1>
+       		<div>
+                <lightning:button variant="brand" label="Logout" onclick="{!c.logout}" />
+            </div> 
+        </div>
+       
+        	<aura:if isTrue="{!v.customer}" >
+                <c:CustomerTabs customerId="{!v.userId}"/>
+        		<aura:set attribute="else">
+                    <c:EmployeeTabs />
+                </aura:set>
+        	</aura:if>
+        <aura:set attribute="else">
+            <c:SignInPage />
+        </aura:set>
+    </aura:if>    
+    
+</aura:component>

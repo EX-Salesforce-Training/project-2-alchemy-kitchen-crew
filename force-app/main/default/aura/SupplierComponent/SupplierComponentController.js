@@ -5,28 +5,34 @@
 * Modified: 8/17/21
 ***************************************************************/
 ({
-    supplierSaveAction : function(cmp, evt, hlpr) {
-        action.setParams({ "name" : cmp.get("v.supp.Name"),
-                          "phone" : cmp.get("v.supp.Phone")
-                         });
-        
-        action.setCallback(this, function(response) {
-            let state = response.getState()
-            });
-        
-        if (state === "SUCCESS") {
-            console.log(cmp.get("c.saveAcc"));    
+       newSupplier : function(cmp, evt, hlpr) {
+        let newSuppView = cmp.get("v.newSuppSwitch"); 
+        if (newSuppView == false) {
+            cmp.set("v.newSuppSwitch", true);
         }
+        else {
+            cmp.set("v.newSuppSwitch", false);
+        }
+    },
+      newSupplierSaveAction : function(cmp, evt, hlpr) {
+        let suppName = cmp.find("NewSuppName").get("v.value");
+        let suppEmail = cmp.find("NewSuppEmail").get("v.value");
+        let suppPhone = cmp.find("NewSuppPhone").get("v.value");
+        if(suppName === null || suppEmail === null || suppPhone === null) {
+             throw new Error("\n" + "Please enter a value for all required fields." + "\n");
+        	 console.log(suppName, suppEmail, suppPhone);
+        }
+        else {
+            cmp.find("NewSupplierForm").submit();
+            cmp.set("v.newSuppSwitch", false);
+            hlpr.getSuppliers(cmp);
+            
+        }
+          
     },
     
     supplierObjsAction : function(component, event, helper) {
-        let supplierObjs = component.get("c.getSupplierObjs");
-        supplierObjs.setCallback(this, function(response) {
-            if(response.getState() === "SUCCESS") {
-                component.set("v.supplierObjs", response.getReturnValue());
-            }
-        })
-        $A.enqueueAction(supplierObjs);
+        helper.getSuppliers(component);
 	},
     
     supplierOrderAction : function(cmp, evt, hlpr) {

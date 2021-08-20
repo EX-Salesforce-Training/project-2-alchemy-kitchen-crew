@@ -15,13 +15,13 @@
    <div class="cartContainer">
         <div class="cartItem">
                  <aura:iteration items="{!v.cart}" var="item">
-                     <c:CartItem item="{!item}" />
+                     <c:CartItem item="{!item}" customerId="{!v.customerId}" />
                 </aura:iteration>
            
         </div> 
         
         <div class="bottomInfo" >
-            	<h3> Total : ${!v.total} </h3>
+            	<h3 style="font-size:20px; font-family:creepyFont;"> Total : ${!v.total} </h3>
             	<lightning:button variant="brand" label="Checkout" onclick="{!c.openConfirm}" />
                 
             <aura:if isTrue="{!v.showConfirmDialog}">

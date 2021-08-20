@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="userId" type="String" />
+    <aura:attribute name="userName" type="String" />
+    <aura:attribute name="isCustomer" type="String" default="False" />
+</aura:event>

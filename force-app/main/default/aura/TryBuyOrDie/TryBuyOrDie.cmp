@@ -40,6 +40,7 @@
             
             
             <h1>% {!v.zombieHealth}</h1>
+            <lightning:button variant="brand" label="Restore Health" title="Destructive action" onclick="{! c.healthReset }"/>
             
         </div>
         <div class="slds-col slds-size_1-of-3"></div>

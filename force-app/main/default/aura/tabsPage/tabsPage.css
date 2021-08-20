@@ -1,0 +1,10 @@
+.THIS {
+     background-image: url('https://2.bp.blogspot.com/-7XBSMkyAyt4/Wc4HoYQXwPI/AAAAAAAABB4/agQ9rNmWfOMX34SfuDIZqtARhiI_JaHFgCLcBGAs/s1600/ZOMBIE%2BINVASION%2BSECTION%2B2.jpg');
+		background-repeat: no-repeat;
+    	background-size: cover !important;
+    	background-attachment: fixed;
+     	filter: invert(100%);
+    	-webkit-filter: invert(100%);
+    	font-weight:bold;
+    	overflow:auto;
+}

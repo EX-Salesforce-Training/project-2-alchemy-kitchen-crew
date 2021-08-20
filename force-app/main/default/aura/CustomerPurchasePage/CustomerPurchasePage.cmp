@@ -10,182 +10,94 @@
 
 
 <aura:component controller="CPPController"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-<!-- Personal Info if returning customer -->
-	 <aura:attribute name="recordId" type="String" /> 
-
+    <!-- Personal Info if returning customer -->
+    <aura:attribute name="recordId" type="String" /> 
     
-    <!-- Title -->    
-<div class="slds-grid slds-wrap">
-    	<div class="slds-col slds-size_1-of-3"></div>
-        <div class="slds-col slds-size_1-of-3 slds-text-align_center">
-           Customer Purchase Page
+<div class="pageContainer">
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-3 slds-text-align_center"></div>
+        
+        <div style="background: white; opacity: 85%; border:2px solid black; border-radius;25px;" class="slds-col slds-size_1-of-3 slds-text-align_center">
+            <h1>Returning Customer?</h1>       
+            <div onkeyup="{! c.handleKeyUp }">
+                <lightning:input
+                                 aura:id="enter-search"
+                                 name="enter-search"
+                                 label="Customer ID: (ex: Type 'Customer-00001')"
+                                 type="search"
+                                 />
+            </div>
+            <div class="slds-col slds-size_1-of-3"></div>
+            
         </div>
-        <div class="slds-col slds-size_1-of-3"></div>
-
     </div>
-
-   
     
     
- 
-<div class="slds-grid slds-wrap">
-	<div class="slds-col slds-size_1-of-3 slds-text-align_center"></div>
     
-    <div class="slds-col slds-size_1-of-3 slds-text-align_center">
-        <h1>Returning Customer?</h1>       
-        <div onkeyup="{! c.handleKeyUp }">
-        <lightning:input
-            aura:id="enter-search"
-            name="enter-search"
-            label="Customer ID: (ex: Type 'Customer-00001')"
-            type="search"
-        />
-        </div>
-        <div class="slds-col slds-size_1-of-3"></div>
-
-    </div>
-</div>
-   
-    
-
     <lightning:recordEditForm aura:id="customerSave" objectApiName="Customer__c" recordId="{!v.recordId}" >      <!--Test data ;) {!v.recordId}a005e000006eEEEAA2-->
-    
+        
         <div class="slds-grid slds-grid_align-center">
-             
-  <div class="slds-col slds-size_1-of-6">
-    <span>
-        
-        <lightning:inputField fieldName="First_Name__c" required="true" />
-         <lightning:inputField fieldName="Last_Name__c" required="true" />
-         <lightning:inputField fieldName="Phone__c" />
-         <lightning:inputField fieldName="Email__c" /></span>
-  </div>
-  <div class="slds-col slds-grow-none">
-    <span></span>
-  </div>
-  <div class="slds-col slds-size_1-of-6">
-    <span>		
-        
-        <lightning:inputField fieldName="Street_Address__c" />
-                <lightning:inputField fieldName="City__c" />
-                <lightning:inputField fieldName="State__c" />
-                <lightning:inputField fieldName="Zip__c" /></span>
-  </div>
-</div>
-        
-        
-        
-        
-
-        
-       <!-- <lightning:input name="firstName" label="First Name:" placeholder="First Name"/>
-        <lightning:input name="lastName" label="Last Name:" placeholder="Last Name"/>
-        <lightning:input name="phone" label="Phone:" placeholder="Phone"/>
-        <lightning:input name="email" label="Email:" placeholder="zombieland@shoppingdead.com"/>
-		-->
-
-        
-        
-        
-     
-
-                
-                
-                
-                
-                
-				<!-- <lightning:input name="address" label="Street Address:" placeholder="1453 Brains Lane"/>
-                <lightning:input name="city" label="City:" placeholder="Deadland City"/>
-                
-                
-                 <lightning:input name="state"
-                                  label="State"
-                                  placeholder="GA"
-                                  maxlength="2"
-                                  messageWhenTooLong="You have exceeded the limit of 2 characters"
-                                  />
-                
-                
-                <lightning:input name="zip" label="Zip Code:" placeholder="75098"/>
-
-	-->
-    
-        
-        
-        
-        
-
-             
-             
-	<!-- <ui:inputCheckbox aura:id="checkbox" label="Select?" change="{!c.onCheck}"/>
-	<p>Selected:</p>
-	<p><ui:outputText class="result" aura:id="checkResult" value="false" /></p>
-	<p>The following checkbox uses a component attribute to bind its value.</p>
-	<ui:outputCheckbox aura:id="output" value="{!v.myBool}"/>
--->
+            
+            <div style="background: white; opacity: 85%; border:2px solid black; border-radius;25px;" class="slds-col slds-size_1-of-6">
+                <span>
+                    
+                    <lightning:inputField fieldName="First_Name__c" required="true" />
+                    <lightning:inputField fieldName="Last_Name__c" required="true" />
+                    <lightning:inputField fieldName="Phone__c" />
+                    <lightning:inputField fieldName="Email__c" /></span>
+                    <lightning:inputField fieldName="Password__c" />
+            </div>
+            <div class="slds-col slds-grow-none">
+                <span></span>
+            </div>
+            <div style="background: white; opacity: 85%; border:2px solid black; border-radius;25px;" class="slds-col slds-size_1-of-6">
+                <span>		
+                    
+                    <lightning:inputField fieldName="Street_Address__c" />
+                    <lightning:inputField fieldName="City__c" />
+                    <lightning:inputField fieldName="State__c" />
+                    <lightning:inputField fieldName="Zip__c" /></span>
+            </div>
+        </div>
          
-        
-        
-        
-        
-        
-      
-        
-        
-        
         <br/><br/>
         <div class="slds-grid slds-wrap">
-	<div class="slds-col slds-size_1-of-3"></div>
-    
-    <div class="slds-col slds-size_1-of-3 slds-text-align_center">
-
-        
-        		<lightning:inputField fieldName="Street_Address__c" />
+            <div class="slds-col slds-size_1-of-3"></div>
+            
+            <div style="background: white; opacity: 85%; border:2px solid black; border-radius;25px;" class="slds-col slds-size_1-of-3 slds-text-align_center">
+                
+                
+                <lightning:inputField fieldName="Street_Address__c" />
                 <lightning:inputField fieldName="City__c" />
                 <lightning:inputField fieldName="State__c" />
                 <lightning:inputField fieldName="Zip__c" />
-                 
-       		    <lightning:inputField fieldName="Ship_to_Billing_Address__c" />
+                
+                <lightning:inputField fieldName="Ship_to_Billing_Address__c" />
                 <lightning:inputField fieldName="Shipping_Street__c" />
                 <lightning:inputField fieldName="Shipping_City__c" />
                 <lightning:inputField fieldName="Shipping_State__c" /> 
-        
-        		<lightning:inputField fieldName="Credit_Card_Type__c" required="true"/>
+                
+                <lightning:inputField fieldName="Credit_Card_Type__c" required="true"/>
                 <lightning:inputField fieldName="Credit_Card_Number__c" required="true"/>
-		        <lightning:inputField fieldName="Credit_Card_Expiration_Month__c" required="true"/>
+                <lightning:inputField fieldName="Credit_Card_Expiration_Month__c" required="true"/>
                 <lightning:inputField fieldName="Credit_Card_Expiration_Year__c" required="true"/>
-
-
-
-        
-        
-        </div>
-        <div class="slds-col slds-size_1-of-3"></div>
-
-    </div>
-
-    
-        <br/><br/><br/><br/>
-        <div class="slds-grid slds-wrap">
-        <div class="slds-col slds-size_1-of-3"></div>
-    
-    <div class="slds-col slds-size_1-of-3 slds-text-align_center">
-        <lightning:button variant="brand" label="Save" iconName="utility:edit" onclick="{!c.customerSaveAction}" /> 
+                <lightning:button variant="brand" label="Save" iconName="utility:edit" onclick="{!c.customerSaveAction}" />
+                
+                
+                
+                
             </div>
             <div class="slds-col slds-size_1-of-3"></div>
-            </div>
+            
+        </div>
+        
         
         <br/><br/><br/><br/>
-    
-    
-    
-    
-
-
-
-
-
-
-</lightning:recordEditForm> 
-  
+            
+        <br/><br/><br/><br/>
+        
+        
+    </lightning:recordEditForm> 
+</div>        
 </aura:component>
