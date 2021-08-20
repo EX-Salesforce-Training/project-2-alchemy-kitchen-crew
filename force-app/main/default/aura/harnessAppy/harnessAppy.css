@@ -80,3 +80,18 @@
     filter: invert(100%);
     -webkit-filter: invert(100%);        
 }
+
+.THIS .midHealthColor {
+	background-image: linear-gradient(rgba(0,255,255,0), rgba(0,255,255,.75));
+}
+
+.THIS .lowHealthColor {
+	background-image: linear-gradient(rgba(0,255,255,.33), rgba(0,255,255,1));
+}
+
+
+
+
+.THIS .outOfHealthColor {
+	background-image: linear-gradient(rgba(0,255,255,1), rgba(0,255,255,1));
+}

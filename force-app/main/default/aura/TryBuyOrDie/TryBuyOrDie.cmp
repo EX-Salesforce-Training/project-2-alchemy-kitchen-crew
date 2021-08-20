@@ -10,12 +10,22 @@
 
 <!-- List of attributes -->
 <aura:component controller="TBODController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- List of Products to try in attacking Zombie -->
     <aura:attribute name="zombieHealth" type="Integer" default="100" />
 	<aura:attribute name="punchAttack" type="Integer" default="2" />    
     <aura:attribute name="knifeAttack" type="Integer" default="10" />
     <aura:attribute name="batAttack" type="Integer" default="20" />
     <aura:attribute name="katanaAttack" type="Integer" default="30" />
+    
+    <!-- Zombie health gif logic -->
+    <aura:attribute name="fullHealth" type="Boolean" default="true" />
+    <aura:attribute name="midHealth" type="Boolean" default="false" />
+    <aura:attribute name="lowHealth" type="Boolean" default="false" />
     <aura:attribute name="outOfHealth" type="Boolean" default="false" />
+    <aura:attribute name="restoreHealth" type="Integer" default="100" />
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.healthReset}" />
     
     
     
@@ -30,19 +40,64 @@
     </div>
     
     
-    <!-- Main Zombi -->
+    <!-- Main Zombie -->
     <div class="slds-grid slds-wrap">
     	<div class="slds-col slds-size_1-of-3"></div>
         <div class="slds-col slds-size_1-of-3 slds-text-align_center">
         <h3>Test various products on zombie dummies to see how effective they are before you buy! 
             Use the buttons to decide what you want to attack with and see the HP of the zombie.
             </h3>
+		<!-- {! c.checkHealth} -->
+		<!-- Check if health is %100 to %0 -->
+		<aura:if isTrue="{!v.fullHealth}">
+           
+        <img id="imageReversion" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Dancing_Zombie.gif"/>
             
-            <img id="imageReversion" src="https://netdna.coolthings.com/wp-content/uploads/2016/04/chris-zombie-target-1.jpg"/>
+        <aura:set attribute="else">
+        <aura:if isTrue="{!v.midHealth}">
+        	
+            <div class="midHealthColor">
+            	<img id="imageReversion" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Dancing_Zombie.gif"/>
+            </div>
+            
+        <aura:set attribute="else">
+        <aura:if isTrue="{!v.lowHealth}">
+            
+            <div class="lowHealthColor">
+            	<img id="imageReversion" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Dancing_Zombie.gif"/>
+            </div>
+            
+            
+        <aura:set attribute="else">
+
+            
+            <div class="outOfHealthColor">
+            	<img id="imageReversion" src="https://pngpress.com/wp-content/uploads/2020/08/uploads_gravestone_gravestone_PNG35-364x468.png"/>
+            </div>
+ 
+
+        </aura:set>
+        </aura:if>
+        </aura:set>
+        </aura:if>
+        </aura:set>
+        </aura:if>
+
+
+
+
+
+
+
+
+            
+           <!-- <img id="imageReversion" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Dancing_Zombie.gif"/> -->
+            
+       <!--     https://netdna.coolthings.com/wp-content/uploads/2016/04/chris-zombie-target-1.jpg -->
             
             
             <h1>% {!v.zombieHealth}</h1>
-            
+            <lightning:button variant="brand" label="Restore Health" title="Destructive action" onclick="{! c.healthReset }"/>
         </div>
         <div class="slds-col slds-size_1-of-3"></div>
 
