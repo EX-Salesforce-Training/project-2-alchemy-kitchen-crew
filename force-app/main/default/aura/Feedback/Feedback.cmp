@@ -2,7 +2,7 @@
 * Feedback.cmp
 * Author: Evan DeVizio
 * Created: 8/16/21
-* Modified: 8/16/21
+* Modified: 8/20/21
 * Purpose: Display a customer feedback form.
 **************************************************************-->
 <aura:component controller="FeedbackControllerC" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
@@ -15,32 +15,32 @@
     </div>
     
     <div class="feedbackForm">
-    <lightning:layout multipleRows="true">
-    <lightning:layoutItem size="12" padding="around-small">
-
-            <lightning:card>
-                <lightning:recordEditForm aura:id="FeedbackForm" recordId="{!v.Feedback}" objectApiName="Feedback__c">
-                <lightning:messages />
-                <h3>How did you hear about us?</h3>
-                	<lightning:inputField fieldName="Feedback_Q1__c" variant="label-hidden"/>
-                <h3>On a scale of 1-5, how would you rate your over experience on The Shopping Dead?</h3>
-                    <lightning:inputField fieldName="Feedback_Q2__c"  variant="label-hidden"/>
-                <h3>On a scale of 1-5, how satisfied were you with the selection of items available for purchase?</h3>
-                    <lightning:inputField fieldName="Feedback_Q3__c"  variant="label-hidden"/>
-                <h3>On a scale of 1-5, how likely are you to refer a friend to The Shopping Dead? </h3>
-                    <lightning:inputField fieldName="Feedback_Q4__c"  variant="label-hidden"/>
-                <h3>Do you have any suggestions for us to improve our software?</h3>
-                    <lightning:inputField fieldName="Feedback_Q5__c"  variant="label-hidden"/>
-                </lightning:recordEditForm>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" padding="around-small">
                 
-                <lightning:button type="submit" name="submit" label="Submit" variant="brand" 
-                                  iconName="utility:upload" iconPosition="left" onclick="{!c.saveFeedback}"/> 
+                <lightning:card>
+                    <lightning:recordEditForm aura:id="FeedbackForm" recordId="{!v.Feedback}" objectApiName="Feedback__c">
+                        <lightning:messages />
+                        <h3>How did you hear about us?</h3>
+                        <lightning:inputField fieldName="Feedback_Q1__c" variant="label-hidden"/>
+                        <h3>On a scale of 1-5, how would you rate your over experience on The Shopping Dead?</h3>
+                        <lightning:inputField fieldName="Feedback_Q2__c"  variant="label-hidden"/>
+                        <h3>On a scale of 1-5, how satisfied were you with the selection of items available for purchase?</h3>
+                        <lightning:inputField fieldName="Feedback_Q3__c"  variant="label-hidden"/>
+                        <h3>On a scale of 1-5, how likely are you to refer a friend to The Shopping Dead? </h3>
+                        <lightning:inputField fieldName="Feedback_Q4__c"  variant="label-hidden"/>
+                        <h3>Do you have any suggestions for us to improve our software?</h3>
+                        <lightning:inputField fieldName="Feedback_Q5__c"  variant="label-hidden"/>
+                    </lightning:recordEditForm>
+                    
+                    <lightning:button type="submit" name="submit" label="Submit" variant="brand" 
+                                      iconName="utility:upload" iconPosition="left" onclick="{!c.saveFeedback}"/> 
+                    
+                </lightning:card>   
                 
-            </lightning:card>   
-
-        </lightning:layoutItem>
+            </lightning:layoutItem>
         </lightning:layout>    
-        </div>
+    </div>
     
     <div class="slds-m-around_xx-large">
         

@@ -1,5 +1,5 @@
 <aura:application extends="force:slds">
     <div>
-        <c:Feedback />
+        <c:SupplierComponent />
     </div>
 </aura:application>

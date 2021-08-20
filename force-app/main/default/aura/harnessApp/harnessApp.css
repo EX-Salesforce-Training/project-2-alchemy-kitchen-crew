@@ -10,6 +10,7 @@
     overflow:auto;
     --sds-c-accordion-heading-font-size: 1.5rem;
     --sds-c-accordion-heading-text-color: black;
+    --sds-c-accordion-summary-color-background: white;
     --sds-c-accordion-heading-text-color-hover: cyan;
 }
 
@@ -47,6 +48,7 @@
     box-sizing: border-box;
     border-style: outset;
     border-width: medium;
+    border-radius: 0.5rem;
     border-color: cyan;    
 }
 
@@ -58,11 +60,11 @@
     box-sizing: border-box;
     border-style: outset;
     border-width: medium;
+    border-radius: 0.5rem;
     border-color: cyan;  
 }
 
 .THIS .feedbackForm {
-    width:auto;
     color:black;
     text-align: center;
     font-size: 18px;
@@ -72,5 +74,6 @@
     box-sizing: border-box;
     border-style: outset;
     border-width: medium;
+    border-radius: 0.5rem;
     border-color: cyan; 
 }

@@ -1,0 +1,8 @@
+.THIS {
+    --sds-c-button-radius-border: 0.5rem;
+}
+    
+.THIS .slds-button_stretch {
+    padding: 10px;
+    margin: 10px;        
+}

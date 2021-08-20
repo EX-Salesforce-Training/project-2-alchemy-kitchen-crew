@@ -2,20 +2,48 @@
 * SupplierComponent.cmp
 * Author: Evan DeVizio
 * Created: 8/10/21
-* Modified: 8/16/21
+* Modified: 8/20/21
 * Purpose: Dynamically display Supplier and Supplier Orders 
-		   in a single component and allow users to edit records.
+		   in a single component and allow users to
+		   create and edit records.
 **************************************************************-->
 
 <aura:component controller="SupplierController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
     <aura:attribute name="supplierObjs" type="Supplier__c[]" />
     <aura:attribute name="suppOrders" type="Supplier_Order__c[]" />
-    <aura:handler name="init" value="{!this}" action="{!c.supplierObjsAction}"/>
+    <aura:attribute name="newSuppSwitch" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.supplierObjsAction}" />
     <aura:handler name="init" value="{!this}" action="{!c.supplierOrderAction}" />
     
     <h1>SUPPLIERS</h1>
     
+    <div style="text-align: center; align-content: center; justify-content: center; display: flex;">
+        <lightning:button name="NewSupplier" label="New Supplier" variant="brand" 
+                          iconName="action:new_note" iconPosition="left" onclick="{!c.newSupplier}"/> 
+    </div>
+   
+    <aura:if isTrue="{!v.newSuppSwitch}">        
+        <div><h2>New Supplier</h2></div>
+        <div class="supplierCmp">
+            <lightning:card>
+                <lightning:recordEditForm aura:id="NewSupplierForm" objectApiName="Supplier__c">
+                    <lightning:messages />
+                    <lightning:inputField aura:id="NewSuppName" fieldName="Name"  required="true"/>
+                    <lightning:inputField aura:id="NewSuppEmail" fieldName="Email__c"  required="true"/>
+                    <lightning:inputField aura:id="NewSuppPhone" fieldName="Phone__c" required="true"/>
+                    <lightning:inputField fieldName="Street_Address__c" />
+                    <lightning:inputField fieldName="City__c" />
+                    <lightning:inputField fieldName="State__c" />
+                    <lightning:inputField fieldName="Zip__c" />
+                    <lightning:inputField fieldName="Website__c" />
+                </lightning:recordEditForm>
+                <lightning:button variant="brand" label="Save" iconName="utility:edit" onclick="{!c.newSupplierSaveAction}" /> 
+            </lightning:card>
+        </div>
+    </aura:if>
+    
     <div class="supplierCmp">
+        
         <lightning:accordion aura:id="accordion">
             <aura:iteration items="{!v.supplierObjs}" var="supplierObj">
                 <lightning:accordionSection label="{!supplierObj.Name}">
@@ -26,14 +54,20 @@
     </div>
     
     <div class="supplierOrderCmp">
-        <div class="slds-grid slds-grid_vertical-align-center">
+        <div class="slds-grid slds-grid_align-center">
             <div class="slds-col">
                 <h1>SUPPLIER ORDERS</h1>
                 <aura:iteration items="{!v.suppOrders}" var="suppOrder">
                     <c:SupplierOrderComponent suppOrder="{!suppOrder}" />
                 </aura:iteration>
             </div>
-        </div>
+        </div>   
+    </div >
+    
+    <div style="text-align: center; align-content: center; justify-content: center; display: flex;">
+        <br />
+        <lightning:button variant="brand" label="Top of Page" iconName="utility:arrowup" onclick="{!c.scrollAction}" class="slds-button_stretch slds-size_1-of-12"/>
+        <br />
     </div>
     
 </aura:component>

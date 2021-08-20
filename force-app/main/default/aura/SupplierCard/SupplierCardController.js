@@ -6,10 +6,9 @@
 * Purpose: Client-side controller for the SupplierCard component.
 ******************************************************************/
 
-({    
-    supplierSaveAction2 : function(cmp, evt, hlpr) {
+({  
+    supplierSaveAction : function(cmp, evt, hlpr) {
         cmp.find("supplierEditForm").submit();
-        accSaveAction();
     },
     
     visitWebsiteAction : function(cmp, evt, hlpr) {

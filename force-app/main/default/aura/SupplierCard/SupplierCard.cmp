@@ -2,12 +2,12 @@
 * SupplierCard.cmp
 * Author: Evan DeVizio
 * Created: 8/11/21
-* Modified: 8/16/21
+* Modified: 8/20/21
 * Purpose: This is an Aura component for displaying Suppliers
 ***************************************************************-->
 <aura:component controller="SupplierController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
     <aura:attribute name="supp" type="Supplier__c" />
-    
+  
     <div>
     <lightning:card>
         <lightning:layout multipleRows="true">
