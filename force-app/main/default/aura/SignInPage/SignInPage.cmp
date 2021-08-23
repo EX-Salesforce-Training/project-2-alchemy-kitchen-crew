@@ -1,0 +1,37 @@
+<aura:component controller="SignInController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 
+    <aura:attribute name="email" type="String"/>
+    <aura:attribute name="password" type="String"/>                
+    
+    <aura:registerEvent name="SignIn" type="c:SignIn" />
+    <div class="container">
+    <br></br>
+     <br></br>
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div class="slds-form-element slds-align_absolute-center" >
+            <div class="slds-col slds-size_6-of-12" style="background-color:white;">
+                <form>
+                    <div class="slds-align_absolute-center slds-m-top_small slds-text-heading_large">
+                        <span style="font-family:creepyFont;">LOGIN</span>
+                    </div>
+                    
+                    <div class="slds-form-element__control">
+                        <lightning:input label="Email" name="username" value="{!v.email}" required="true" />
+                    </div>
+                    
+                    <div class="slds-form-element__control">
+                        <lightning:input label="Password:" type="password" name="password"  value="{!v.password}" required="true" />
+                    </div>
+                    
+                    <div class="slds-align_absolute-center" style="height:4rem">
+                        <lightning:button variant="Brand" label="Login" onclick="{!c.login}"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</aura:component>

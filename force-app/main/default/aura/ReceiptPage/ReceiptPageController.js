@@ -1,5 +1,6 @@
 ({
     retreiveInfo : function(component,event,helper) {
+        console.log("did i initialize?");
         let customerId = component.get("v.customer");
         console.log("customerId", customerId);
         let getReceiptsAction = component.get("c.getReceipts");
@@ -9,6 +10,7 @@
         getReceiptsAction.setCallback(this, function(response) {
             if(response.getState() === "SUCCESS") {
               component.set("v.productIds",response.getReturnValue());
+                console.log('receipts',response.getReturnValue());
             } else {
                 console.log("state",response.getState());
             }
@@ -16,7 +18,7 @@
         window.setTimeout(
             $A.getCallback(function() {
                $A.enqueueAction(getReceiptsAction);
-            }), 3000
+            }), 5000
     	);
         helper.retreiveCustomerInfo(component);
     },

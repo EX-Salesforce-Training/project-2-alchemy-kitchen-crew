@@ -11,15 +11,19 @@
     
     <aura:handler name="init" value="{!this}" action="{!c.retrieveProduct}" />
    
+   				<div>
+    
    
-                <lightning:card class="productCard" variant="Narrow" title="Product" iconName="standard:account" >
-               		<lightning:recordViewForm recordId="{!v.id}" objectApiName="Product2">
-                    	<div >
-                            <lightning:outputField fieldName="Name" />
-                            <lightning:outputField fieldName="ProductCode" />
-                            <lightning:outputField fieldName="Price__c" />
-                        </div>
-					</lightning:recordViewForm>
-                    <lightning:button variant="brand" label="Add to Cart" onclick="{!c.addToCart}" />
-            	</lightning:card>
+                    <lightning:card class="productCard" variant="Narrow" title="Product" iconName="standard:account">
+                        <lightning:recordViewForm recordId="{!v.id}" objectApiName="Product2">
+                            <div >
+                                <lightning:outputField fieldName="Name" />
+                                <lightning:outputField fieldName="ProductCode" />
+                                <lightning:outputField fieldName="Price__c" />
+                            </div>
+                        </lightning:recordViewForm>
+                        <lightning:button variant="brand" label="Add to Cart" onclick="{!c.addToCart}" />
+                    </lightning:card>
+    
+    			</div>
 </aura:component>

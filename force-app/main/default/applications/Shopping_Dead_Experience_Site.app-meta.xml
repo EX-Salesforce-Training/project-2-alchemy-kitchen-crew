@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_App</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#21AB14</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Shopping Dead Experience Site</label>
+    <navType>Standard</navType>
+    <tabs>Transaction__c</tabs>
+    <tabs>Customer__c</tabs>
+    <tabs>Store__c</tabs>
+    <tabs>Store_Owner__c</tabs>
+    <tabs>Receipt__c</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>supplier</tabs>
+    <tabs>Supplier_Order__c</tabs>
+    <tabs>Supplier_Order</tabs>
+    <tabs>Supplier_Page</tabs>
+    <tabs>Supplier__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Shopping_Dead_Experience_Site_UtilityBar</utilityBar>
+</CustomApplication>

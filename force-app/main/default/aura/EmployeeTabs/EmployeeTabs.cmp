@@ -1,0 +1,12 @@
+<aura:component >
+	<lightning:tabset  > 
+
+		<lightning:tab label="Supplier Page">
+            <c:SupplierComponent />
+        </lightning:tab>
+        
+        <lightning:tab label="Customer Page">
+            <c:CustomerPurchasePage />
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

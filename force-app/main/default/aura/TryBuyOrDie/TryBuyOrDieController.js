@@ -1,7 +1,13 @@
 ({
-	myAction : function(component, event, helper) {
-		
-	},
+  healthReset : function (cmp, event, helper) {
+        // alert("You clicked: " + event.getSource().get("v.label"));
+       console.log('Health Reset Ran');
+       let zombieHealthHit = cmp.get('v.zombieHealth');
+         cmp.set("v.zombieHealth", 100);
+        console.log('added Health to zombie');
+   
+        
+    },
 
     punchClick : function (cmp, event, helper) {
        // alert("You clicked: " + event.getSource().get("v.label"));

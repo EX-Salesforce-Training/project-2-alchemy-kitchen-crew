@@ -1,13 +1,15 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-	<lightning:tabset variant="vertical" >
-    	<lightning:tab label="Products">
+	<lightning:tabset  > 
+    
+        <lightning:tab label="Products">
             <c:ProductandReceiptContainer />
-        </lightning:tab>
-		<lightning:tab label="Supplier Page">
-            <c:SupplierComponent />
         </lightning:tab>
         <lightning:tab label="Customer Page">
             <c:CustomerPurchasePage />
+        </lightning:tab>
+    	
+		<lightning:tab label="Supplier Page">
+            <c:SupplierComponent />
         </lightning:tab>
         <lightning:tab label="Try Buy Or Die">
             <c:TryBuyOrDie />

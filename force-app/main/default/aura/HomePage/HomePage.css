@@ -1,0 +1,19 @@
+.THIS {
+}
+.THIS.header{
+    font-family:'creepyFont';
+    font-size: 64px;
+    color: cyan;
+    text-align:center;
+}
+
+.THIS .userWelcome {
+    font-family: 'creepyFont';
+    font-size:30px;
+    color:cyan;
+    text-align:right;
+}
+
+.THIS.userInfo{
+	text-align:right;
+}
